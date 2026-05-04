@@ -1,18 +1,18 @@
 :root {
-  --crema: #ffdd9a;
-  --amarillo: #ffa902;
-  --navy: #000e47;
-  --azul: #153fb7;
-  --fucsia: #9857df;
-  --verde: #027e59;
-  --morado: #7f00a9;
-  --naranja: #ff7723;
+    --crema: #ffdd9a;
+    --amarillo: #ffa902;
+    --navy: #000e47;
+    --azul: #153fb7;
+    --fucsia: #9857df;
+    --verde: #027e59;
+    --morado: #7f00a9;
+    --naranja: #ff7723;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /*------------------------------------------------------------------------
@@ -22,72 +22,76 @@
  -----------------------------------------------------------------------*/
 
 header {
-  background-color: var(--navy);
-  padding: 20px 0;
-  font-family: sans-serif;
+    background-color: var(--navy);
+    padding: 20px 0;
+    font-family: sans-serif;
 }
 
 .container-header {
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; /* separa el logo del nav*/
-  align-items: center;
-  padding: 0 5%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* separa el logo del nav*/
+    align-items: center;
+    padding: 0 5%;
 }
 
 .logo img {
-  height: 50px; /* Se ajusto según el tamaño del logo */
+    height: 50px;
+    /* Se ajusto según el tamaño del logo */
 }
 
 /* Navegación y lista */
 nav {
-  display: flex;
-  align-items: center;
-  gap: 30px; /* espacio entre la lista de el boton */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* espacio entre la lista de el boton */
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px; /* Espacio entre cada enlace */
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    /* Espacio entre cada enlace */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 14px;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
 /* Efecto de la linea verde debajo de "Inicio" */
 nav ul li a:hover {
-  color: var(--verde);
+    color: var(--verde);
 }
 
 nav ul li a.active {
-  border-bottom: 5px solid var(--verde);
-  padding-bottom: 9px;
-  border-radius: 1px;
+    border-bottom: 5px solid var(--verde);
+    padding-bottom: 9px;
+    border-radius: 1px;
 }
 
 /* Botón CTA (call to Action) */
 .cta-button {
-  background-color: var(--verde);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+    background-color: var(--verde);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #4db38c;
+    background-color: #4db38c;
 }
 
 /*------------------------------------------------------------------------
@@ -97,151 +101,161 @@ nav ul li a.active {
  ------------------------------------------------------------------------*/
 
 .hero {
-  background-color: var(--navy);
-  background-image: url("hero-bg.png"); /*imagen de los chicos de fondo*/
-  background-size: cover;
-  background-position: center;
-  padding: 30px 0;
-  color: white;
-  min-height: 30vh;
-  display: flex;
-  align-items: center;
+    background-color: var(--navy);
+    background-image: url("hero-bg.png");
+    /*imagen de los chicos de fondo*/
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+    color: white;
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
 }
 
 .container-hero {
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; /*separe el contenido del formulario*/
-  align-items: center;
-  padding: 0 5%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /*separe el contenido del formulario*/
+    align-items: center;
+    padding: 0 5%;
 }
 
 /* ----------------------------------------
     Contenido izquierdo del hero (título, texto, botones)
 -------------------------------------------*/
 .hero-content {
-  flex: 0 0 37%;
-  max-width: 100%;
+    flex: 0 0 37%;
+    max-width: 100%;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  line-height: 1.2;
-  margin-bottom: 20px;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .hero-content h1 span {
-  color: var(--amarillo);
+    color: var(--amarillo);
 }
 
 .hero-content p {
-  font-size: 1.3rem;
-  margin-right: 12rem;
-  line-height: 1.5;
+    font-size: 1.3rem;
+    margin-right: 12rem;
+    line-height: 1.5;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 50px;
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
 }
 
 .hero-buttons .cta-button {
-  background-color: var(--crema);
+    background-color: var(--crema);
 }
+
 .secondary-button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 
 /* ----------------------------------------
     Lado derecho: formulario
 -------------------------------------------*/
 .hero-form-card {
-  background: white;
-  color: #333;
-  padding: 20px;
-  border-radius: 20px;
-  width: 400px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    background: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .hero-form-card h2 {
-  color: var(--navy);
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  text-align: center;
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .hero-form-card p {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
 }
 
 /*Estilos de los inputs*/
 input,
 select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-sizing: border-box; /*Evita que el input se salga del borde*/
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    /*Evita que el input se salga del borde*/
 }
+
 .btn-submit {
-  width: 100%;
-  background-color: var(--crema);
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+    width: 100%;
+    background-color: var(--crema);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .proteccion {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 0.75rem;
-  color: #888;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #888;
 }
 
 .proteccion p {
-  text-align: left;
+    text-align: left;
 }
 
 .proteccion img {
-  width: 15px;
+    width: 15px;
 }
 
 .input-group {
-  position: relative;
-  margin-top: 15px; /*espacio extra para que la etiqueta no choque*/
-  margin-bottom: 15px;
+    position: relative;
+    margin-top: 15px;
+    /*espacio extra para que la etiqueta no choque*/
+    margin-bottom: 15px;
 }
 
 .input-group label {
-  position: absolute;
-  top: -10px; /*Mueve la etiqueta hacia arriba para que quede sobre el borde */
-  left: 12px; /*alineacion horizontal*/
-  background-color: white; /* MUY IMPORTANTE: tapa el borde del select*/
-  padding: 0 5px;
-  font-size: 0.85rem;
-  color: #333;
-  font-weight: 500;
-  z-index: 1; /*Asegura que este por encima del borde*/
+    position: absolute;
+    top: -10px;
+    /*Mueve la etiqueta hacia arriba para que quede sobre el borde */
+    left: 12px;
+    /*alineacion horizontal*/
+    background-color: white;
+    /* MUY IMPORTANTE: tapa el borde del select*/
+    padding: 0 5px;
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+    z-index: 1;
+    /*Asegura que este por encima del borde*/
 }
 
 /*------------------------------------------------------------------------
@@ -252,67 +266,74 @@ select {
 
 /*sección principal*/
 .nuestros-pilares {
-  background-color: #ffffff;
-  padding: 40px 0;
-  text-align: center;
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .container-pilares {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 5%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 .container-pilares h2 {
-  font-size: 3.5rem;
-  margin: 0 auto;
-  padding: 0 20px;
+    font-size: 2.5rem;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /*grid para las 3 columnas*/
 .pilares-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /*crea 3 columnas iguales*/
-  gap: 40px; /*espacio entre tarjetas*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*crea 3 columnas iguales*/
+    gap: 40px;
+    /*espacio entre tarjetas*/
 }
 
 /*estilo de cada tarjeta (pilar)*/
 .pilar {
-  background-color: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /*sombra suave*/
-  display: flex; /*alinear imagen al texto en fila*/
-  align-items: flex-start; /*alinea elementos al topo superior*/
-  gap: 20px;
-  text-align: left;
-  transform: transform 0.3s ease;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /*sombra suave*/
+    display: flex;
+    /*alinear imagen al texto en fila*/
+    align-items: flex-start;
+    /*alinea elementos al topo superior*/
+    gap: 20px;
+    text-align: left;
+    transform: transform 0.3s ease;
 }
 
 .pilar:hover {
-  transform: transLateY(-10px); /*Efecto de levante al pasar el mouse*/
+    transform: transLateY(-10px);
+    /*Efecto de levante al pasar el mouse*/
 }
 
 /*Iconos*/
 .pilar img {
-  width: 50px;
-  height: auto;
-  flex-shrink: 0; /*evita que la img se deforme o encoja*/
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+    /*evita que la img se deforme o encoja*/
 }
 
 /*texto dentro de la tarjeta*/
 .pilar h3 {
-  color: #051120;
-  font-size: 1.8rem;
-  margin-bottom: 8px;
-  margin-top: 0;
+    color: #051120;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    margin-top: 0;
 }
 
 .pilar p {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /*------------------------------------------------------------------------
@@ -322,90 +343,96 @@ select {
  ------------------------------------------------------------------------*/
 
 .quienes-somos-section {
-  padding: 50px 100px;
-  background-color: #f4f7f6;
+    padding: 50px 100px;
+    background-color: #f4f7f6;
 }
 
 .container-quienes-somos {
-  max-width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr; /*la imagen ocupará menos que el texto*/
-  gap: 40px;
-  align-items: start;
-  padding: 0 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /*la imagen ocupará menos que el texto*/
+    gap: 40px;
+    align-items: start;
+    padding: 0 20px;
 }
 
 /* Estilo de la img*/
 .img-personas img {
-  width: 100%;
-  border-radius: 15px;
-  display: block;
+    width: 100%;
+    border-radius: 15px;
+    display: block;
 }
 
 /*contenedor de la derecha*/
 .bloques-texto {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /*dos columnas para los textos*/
-  gap: 30px;
-  margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*dos columnas para los textos*/
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
 /*titulos en morado*/
 .info-quienes-somos h3,
 .proposito h3 {
-  color: var(--morado);
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  text-align: left;
+    color: var(--morado);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .info-quienes-somos p,
 .proposito p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
-  text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: left;
 }
 
 /*alineación del icono de propósito*/
 
 .proposito {
-  display: flex;
-  align-items: flex-start; /*se alinea el icono con la parte superior del h3*/
-  gap: 15px; /*Espacio exacto entre icono y texto*/
+    display: flex;
+    align-items: flex-start;
+    /*se alinea el icono con la parte superior del h3*/
+    gap: 15px;
+    /*Espacio exacto entre icono y texto*/
 }
 
 .titulo-con-icono {
-  flex-shrink: 0; /*evita que la imagen se encoja*/
-  padding-top: 5px;
+    flex-shrink: 0;
+    /*evita que la imagen se encoja*/
+    padding-top: 5px;
 }
 
 .titulo-con-icono img {
-  width: 40px;
-  height: auto;
+    width: 40px;
+    height: auto;
 }
 
 /*boton largo y morado*/
 .cta-button-largo {
-  background-color: var(--morado);
-  color: white;
-  border: none;
-  padding: 18px 25px;
-  border-radius: 10px;
-  width: 100%; /*ocupa el ancho del contenedor*/
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  cursor: pointer;
-  transition: background 0.3s;
+    background-color: var(--morado);
+    color: white;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 10px;
+    width: 100%;
+    /*ocupa el ancho del contenedor*/
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .cta-button-largo:hover {
-  background-color: #311b92;
+    background-color: #311b92;
 }
 
 /*------------------------------------------------------------------------
@@ -414,34 +441,643 @@ select {
  --------------------------------------------------------------------------
  ------------------------------------------------------------------------*/
 
+.nuestras-especialidades {
+    padding: 20px 100px;
+    background-color: white;
+    text-align: center;
+}
+
+.container-especialidades h2 {
+    font-size: 2.2rem;
+    color: #051120;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+/*grid de 3 columnas*/
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5%;
+}
+
+/*estilo base de las tarjetas*/
+.investigacion-card,
+.incubacion-card,
+.experiencia-card {
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.investigacion-card:hover,
+.incubacion-card:hover,
+.experiencia-card:hover {
+    transform: translateY(-5px);
+}
+
+/*Iconos circulares superiores*/
+.especialidades-grid>div>img:first-child {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.especialidades-grid h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.especialidades-grid p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 60px;
+    /*Mantiene la alineación si el texto varia*/
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    /*alinea el iciono con la part superior del texto*/
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.main-icon {
+    width: 60px !important;
+    height: 60px !important;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+/*bloque de texto al lado del icono*/
+.card-info {
+    text-align: left;
+}
+
+.card-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.card-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Lista de checks*/
+.lista-check {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    flex-grow: 1;
+    /*empuja el boton hacia abajo para que todos estén alineados*/
+}
+
+.lista-check li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.lista-check li img {
+    width: 16px;
+    height: 16px;
+}
+
+
+/*Colores personalizados*/
+
+/*1. investigación azul*/
+.investigacion-card {
+    background-color: #f0f7ff;
+    border-color: #d0e4ff;
+}
+
+.investigacion-card h3 {
+    color: var(--azul)
+}
+
+.investigacion-card .cta-button {
+    background-color: var(--azul);
+    color: white;
+}
+
+/*2. incubación morado*/
+.incubacion-card {
+    background-color: #f8f4ff;
+    border-color: #e8dbff;
+}
+
+.incubacion-card h3 {
+    color: var(--morado);
+}
+
+.incubacion-card .cta-button {
+    background-color: var(--morado);
+    color: white;
+}
+
+/*3. experiencia verde*/
+.experiencia-card {
+    background-color: #f2faf6;
+    border-color: #d1eadf;
+}
+
+.experiencia-card h3 {
+    color: var(--verde);
+}
+
+.experiencia-card .cta-button {
+    background-color: var(--verde);
+    color: white;
+}
+
+/*botones dentro de las tarjetas*/
+.cta-button {
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.cta-button:hover {
+    opacity: 0.8;
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Metodología
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+.metodologia {
+    background-color: var(--navy);
+    padding: 20px 100px;
+    text-align: center;
+    color: white;
+}
+
+.meotologia h2 {
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+}
+
+/*Contenedor de los pasis*/
+.pasos-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    position: relative;
+
+}
+
+/*La linea punteada de fondo*/
+.pasos-container::before {
+    content: "";
+    position: absolute;
+    top: 75px;
+    /*Alineada al centro de los circulos blancos*/
+    left: 130px;
+    right: 130px;
+    height: 8px;
+    /* Este es el grosor de los puntos*/
+    /*Degradado radial para crear círculos perfectos */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 25%, transparent 25%);
+    /*Ajusta el primero valor (40px) para separar más o menos los puntos*/
+    background-size: 10px 95%;
+    background-repeat: repeat-x;
+    z-index: 1;
+
+}
+
+.pasos-container::after {
+    content: "";
+    position: absolute;
+    /*Ajustamos para que encierre desde elos números hasta los textos*/
+    top: 78px;
+    /*Empieza a la mitad de los circulos*/
+    bottom: 20px;
+    /* LLEga hasta un poco después del texto*/
+    left: 20px;
+    /*Margen izquierdo*/
+    right: 20px;
+    /*Margen derecho*/
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /*Linea muy tenue*/
+    border-radius: 20px;
+    /*Esquinas redondeadas*/
+
+}
+
+/*cada item de la lista*/
+.paso-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    /*Para estar por encima de la linea punteada*/
+}
+
+/*contenedor del circulo e icono*/
+.icono-wrap {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icono-wrap img {
+    width: 45px;
+    height: auto;
+}
+
+/*El número pequelo de color*/
+.numero {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+/*Colores especificos para cada número*/
+.paso-item:nth-child(1) .numero {
+    background-color: var(--azul);
+}
+
+.paso-item:nth-child(2) .numero {
+    background-color: var(--morado);
+}
+
+.paso-item:nth-child(3) .numero {
+    background-color: #00a3cc;
+}
+
+.paso-item:nth-child(4) .numero {
+    background-color: var(--naranja);
+}
+
+.paso-item:nth-child(5) .numero {
+    background-color: var(--verde);
+}
+
+/*textos*/
+.paso-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    max-width: 120px;
+    /*para que el titulo rompa en dos líneas*/
+}
+
+.paso-item p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #cbd5e0;
+    max-width: 200px;
+    padding: 0 10px;
+}
+
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Impacto
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+.container-impacto {
+    padding: 50px 100px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-impacto h2 {
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 50px;
+}
+
+/*grid de 4 columnas con separadores*/
+.impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    /*Quitamos gap para usasr border como sepradores*/
+}
+
+
+.impacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-right: 1px solid #eee;
+    /*Linea vertical divisoria*/
+}
+
+/*Quitamos borde del último elemento*/
+.impacto-item:last-child {
+    border-right: none;
+}
+
+/*envoltorio del icono con fondo suave*/
+.icono-bg {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icono-bg img {
+    width: 35px;
+    height: auto;
+}
+
+/*textos*/
+.impacto-texto {
+    text-align: left;
+}
+
+.impacto-texto h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.impacto-texto p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/*COLORES PERSONALIZADOS DE CADA COLUMNA*/
+
+/*azul*/
+.item-azul .icono-bg {
+    background-color: #eef4ff;
+}
+
+.item-azul h3 {
+    color: var(--azul);
+}
+
+/*morado*/
+.item-morado .icono-bg {
+    background-color: #f5f0ff;
+}
+
+.item-morado h3 {
+    color: var(--morado);
+}
+
+/*verde*/
+.item-verde .icono-bg {
+    background-color: #effaf3;
+}
+
+.item-verde h3 {
+    color: var(--verde);
+}
+
+/*naranja*/
+.item-naranja .icono-bg {
+    background-color: #fff4eb;
+}
+
+.item-naranja h3 {
+    color: var(--naranja);
+}
+
+
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Testimonios
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+.testimonios {
+    padding: 50px 100px;
+    background-color: #f8faff;
+    text-align: center;
+}
+
+.testimonios h2 {
+    color: #051120;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*buebuja de texto blanca*/
+.testimonio-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.testimonio-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    /*alinea perfil y texto en fila*/
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/*columna del perfil*/
+.testimonio-perfil {
+    flex-shrink: 0;
+    /*impide que se achique la foto*/
+    width: 100px;
+    /*ancho fijo para la columna del avatar*/
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* border suavemente redondeados*/
+    margin-bottom: 15px;
+}
+
+.autor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #051120;
+    margin-bottom: 4px;
+}
+
+.cargo {
+    font-size: 0.75rem;
+    color: #888;
+    line-height: 1.2;
+}
+
+/*columna de texto */
+.testimonio-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comillas {
+    width: 20px;
+    /*comillas pequeñas*/
+    opacity: 0.4;
+}
+
+.testimonio-texto p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+    font-style: italic;
+}
+
+
+
 /*-------------MediaQuery--------------*/
 
 @media (max-width: 768px) {
-  .container-hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .hero-buttons {
-    flex-direction: column;
-  }
+    .container-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .pasos-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .pasos-container::before {
+        display: none;
+        /* Quitamos la línea en vertical */
+    }
 }
 
 @media (max-width: 992px) {
-  .pilares-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .pilares-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .especialidades-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .impacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impacto-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .impacto-item {
+        border-bottom: 1px solid #eee;
+    }
 }
 
 @media (max-width: 600px) {
-  .pilares-grid {
-    grid-template-columns: 1fr;
-  }
+    .pilares-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impacto-item {
+        border-right: none;
+    }
 }
 
 @media (max-width: 850px) {
-  .container-quienes-somos,
-  .bloques-texto {
-    grid-template-columns: 1fr; /* Todo a una sola columna */
-  }
+
+    .container-quienes-somos,
+    .bloques-texto {
+        grid-template-columns: 1fr;
+        /* Todo a una sola columna */
+    }
+}
+
+@media (max-width: 1024px) {
+    .testimonios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonio-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
