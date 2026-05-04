@@ -1,0 +1,447 @@
+:root {
+  --crema: #ffdd9a;
+  --amarillo: #ffa902;
+  --navy: #000e47;
+  --azul: #153fb7;
+  --fucsia: #9857df;
+  --verde: #027e59;
+  --morado: #7f00a9;
+  --naranja: #ff7723;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                HEADER
+ --------------------------------------------------------------------------
+ -----------------------------------------------------------------------*/
+
+header {
+  background-color: var(--navy);
+  padding: 20px 0;
+  font-family: sans-serif;
+}
+
+.container-header {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* separa el logo del nav*/
+  align-items: center;
+  padding: 0 5%;
+}
+
+.logo img {
+  height: 50px; /* Se ajusto según el tamaño del logo */
+}
+
+/* Navegación y lista */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* espacio entre la lista de el boton */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Espacio entre cada enlace */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+/* Efecto de la linea verde debajo de "Inicio" */
+nav ul li a:hover {
+  color: var(--verde);
+}
+
+nav ul li a.active {
+  border-bottom: 5px solid var(--verde);
+  padding-bottom: 9px;
+  border-radius: 1px;
+}
+
+/* Botón CTA (call to Action) */
+.cta-button {
+  background-color: var(--verde);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #4db38c;
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                HERO
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+.hero {
+  background-color: var(--navy);
+  background-image: url("hero-bg.png"); /*imagen de los chicos de fondo*/
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0;
+  color: white;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+}
+
+.container-hero {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /*separe el contenido del formulario*/
+  align-items: center;
+  padding: 0 5%;
+}
+
+/* ----------------------------------------
+    Contenido izquierdo del hero (título, texto, botones)
+-------------------------------------------*/
+.hero-content {
+  flex: 0 0 37%;
+  max-width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: var(--amarillo);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-right: 12rem;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.hero-buttons .cta-button {
+  background-color: var(--crema);
+}
+.secondary-button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* ----------------------------------------
+    Lado derecho: formulario
+-------------------------------------------*/
+.hero-form-card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.hero-form-card h2 {
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hero-form-card p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/*Estilos de los inputs*/
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box; /*Evita que el input se salga del borde*/
+}
+.btn-submit {
+  width: 100%;
+  background-color: var(--crema);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.proteccion {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.proteccion p {
+  text-align: left;
+}
+
+.proteccion img {
+  width: 15px;
+}
+
+.input-group {
+  position: relative;
+  margin-top: 15px; /*espacio extra para que la etiqueta no choque*/
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  position: absolute;
+  top: -10px; /*Mueve la etiqueta hacia arriba para que quede sobre el borde */
+  left: 12px; /*alineacion horizontal*/
+  background-color: white; /* MUY IMPORTANTE: tapa el borde del select*/
+  padding: 0 5px;
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  z-index: 1; /*Asegura que este por encima del borde*/
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Nuestros pilares
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+/*sección principal*/
+.nuestros-pilares {
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.container-pilares {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.container-pilares h2 {
+  font-size: 3.5rem;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*grid para las 3 columnas*/
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*crea 3 columnas iguales*/
+  gap: 40px; /*espacio entre tarjetas*/
+}
+
+/*estilo de cada tarjeta (pilar)*/
+.pilar {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /*sombra suave*/
+  display: flex; /*alinear imagen al texto en fila*/
+  align-items: flex-start; /*alinea elementos al topo superior*/
+  gap: 20px;
+  text-align: left;
+  transform: transform 0.3s ease;
+}
+
+.pilar:hover {
+  transform: transLateY(-10px); /*Efecto de levante al pasar el mouse*/
+}
+
+/*Iconos*/
+.pilar img {
+  width: 50px;
+  height: auto;
+  flex-shrink: 0; /*evita que la img se deforme o encoja*/
+}
+
+/*texto dentro de la tarjeta*/
+.pilar h3 {
+  color: #051120;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.pilar p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Quienes somos
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+.quienes-somos-section {
+  padding: 50px 100px;
+  background-color: #f4f7f6;
+}
+
+.container-quienes-somos {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /*la imagen ocupará menos que el texto*/
+  gap: 40px;
+  align-items: start;
+  padding: 0 20px;
+}
+
+/* Estilo de la img*/
+.img-personas img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+/*contenedor de la derecha*/
+.bloques-texto {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*dos columnas para los textos*/
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/*titulos en morado*/
+.info-quienes-somos h3,
+.proposito h3 {
+  color: var(--morado);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.info-quienes-somos p,
+.proposito p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+}
+
+/*alineación del icono de propósito*/
+
+.proposito {
+  display: flex;
+  align-items: flex-start; /*se alinea el icono con la parte superior del h3*/
+  gap: 15px; /*Espacio exacto entre icono y texto*/
+}
+
+.titulo-con-icono {
+  flex-shrink: 0; /*evita que la imagen se encoja*/
+  padding-top: 5px;
+}
+
+.titulo-con-icono img {
+  width: 40px;
+  height: auto;
+}
+
+/*boton largo y morado*/
+.cta-button-largo {
+  background-color: var(--morado);
+  color: white;
+  border: none;
+  padding: 18px 25px;
+  border-radius: 10px;
+  width: 100%; /*ocupa el ancho del contenedor*/
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button-largo:hover {
+  background-color: #311b92;
+}
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Nuestras especialidades
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+/*-------------MediaQuery--------------*/
+
+@media (max-width: 768px) {
+  .container-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .pilares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .pilares-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .container-quienes-somos,
+  .bloques-texto {
+    grid-template-columns: 1fr; /* Todo a una sola columna */
+  }
+}

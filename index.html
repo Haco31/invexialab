@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <title>InvexiaLab</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#" class="active">Inicio</a></li>
                     <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Metodología</a></li>
@@ -30,45 +30,41 @@
             <div class="hero-content">
                 <h1>Transforma tus ideas en soluciones <span>reales</span> y <span>sostenibles</span></h1>
                 <p>Acompañamos a estudiantes y profesionales a convertir sus conocimientos en proyectos, startups y experiencias que generan impacto en Perú y LATAM.</p>
-                <button class="cta-button">Agenda una reunión gratuita</button>
+                <div class="hero-buttons">
+                    <button class="cta-button">
+                        <img src="calendario.png" alt="calendario">
+                        Agenda una reunión gratuita
+                    </button>
+                    <button class="secondary-button">
+                        <img src="wts.png" alt="WhatsApp">
+                        Escribenos por WhatsApp
+                    </button>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="hero.png" alt="Hero">
-            </div>
-            <button class="cta-button">
-                <img src="arrow.png" alt="Arrow">
-                Agenda tu sesión gratuita
-            </button>
-            <button class="secondary-button">
-                <img src="wts.png" alt="WhatsApp">
-                Escribenos por WhatsApp
-            </button>
-        </div>    
-    </section>
-    <section class="formulario">
-        <div class="container-form">
-            <h2>Agenda tu sesión gratuita</h2>
-            <p>Déjanos tus datos y te contactaremos.</p>
-            <form action="">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
+            <div class="hero-form-card">
+                <h2>Agenda tu sesión gratuita</h2>
+                <p>Déjanos tus datos y te contactaremos.</p>
+                <form action="">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required>
                     <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="tel" name="telefono" placeholder="Teléfono">
+                    <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
                     <div class="input-group">
                         <label for="servicio">Servicio de interés</label>
                         <select id="servicio" name="servicio" required>
-                            <option value="" disabled selected>Selecciona un servicio</option>
+                            <option value="" disabled selected>Selecciona una opción</option>
                             <option value="asesoria">Asesoría en investigación</option>
                             <option value="incubacion">Incubación de startups</option>
                             <option value="experiencia">Retención y experiencia del cliente</option>
                         </select>
                     </div>
-                <button type="submit" class="cta-button">Quiero que me contacten</button>
-                <div class="proteccion">
-                    <img src="candado.png" alt="Candado">
-                    <p>Tus datos están protegidos. No compartimos tu información con terceros.</p>
-                </div>
-            </form>
-        </div>
+                    <button type="submit" class="btn-submit">Quiero que me contacten</button>
+                    <div class="proteccion">
+                        <img src="candado.png" alt="Candado">
+                        <p>Tus datos están protegidos. No compartimos tu información con terceros.</p>
+                    </div>
+                </form>
+            </div>
+        </div>    
     </section>
     <section class="nuestros-pilares">
         <article class="container-pilares">
@@ -76,35 +72,54 @@
             <div class="pilares-grid">
                 <div class="pilar">
                     <img src="educacion.png" alt="Educación">
-                    <h3>Excelencia académica y estratégica</h3>
-                    <p>Metodologías rigurosas y aplicadas para lograr resultados de alto impacto</p>
+                    <div class="pilar-info">
+                        <h3>Excelencia académica y estratégica</h3>
+                        <p>Metodologías rigurosas y aplicadas para lograr resultados de alto impacto</p>
+                    </div>
                 </div>
                 <div class="pilar">
                     <img src="tecnologia.png" alt="Tecnología">
-                    <h3>Tecnología con propósito</h3>
-                    <p>Usamos herramientas y datos para tomar mejores decisiones.</p>
+                    <div class="pilar-info">
+                        <h3>Tecnología con propósito</h3>
+                        <p>Usamos herramientas y datos para tomar mejores decisiones.</p>
+                    </div>
                 </div>
                 <div class="pilar">
                     <img src="sostenibilidad.png" alt="Sostenibilidad">
-                    <h3>Sostenibilidad como eje transversal</h3>
-                    <p>Integramos el impacto social y ambiental en cada solución que creamos.</p>
+                    <div class="pilar-info">
+                        <h3>Sostenibilidad como eje transversal</h3>
+                        <p>Integramos el impacto social y ambiental en cada solución que creamos.</p>
+                    </div>
                 </div>
             </div>
         </article>
-        <article class="quienes-somos">
-            <div class="img-personas">
-                <img src="grupo-personas.png" alt="reunion de personas">
+        <article class="quienes-somos-section">
+            <div class="container-quienes-somos">
+                <div class="img-personas">
+                    <img src="grupo-personas.png" alt="reunion de personas">
+                </div>
+                <div class="contenido-derecho">
+                    <div class="bloques-texto">
+                        <div class="info-quienes-somos">
+                            <h3>¿Quiénes somos?</h3>
+                            <p>Somos un ecosistema que integra asesoría en investigación, incubación de startups y experiencia en soluciones reales, sostenibles y con impacto en Perú y LATAM</p>
+                        </div>
+                        <div class="proposito">
+                            <div class="titulo-con-icono">
+                                <img src="blancopunto.png" alt="punto blanco">
+                            </div>
+                            <div class="texto-proposito">
+                                <h3>Nuestro Propósito</h3>    
+                                <p>Acompañar a personas y organizaciones a transformar conocimiento, ideas y experiencia en soluciones reales que generen oportunidades, empleabilidad y desarrollo sostenible en Perú y LATAM.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cta-button-largo">
+                        <img src="icono-boton.png" alt="">
+                        Agenda tu sesión gratuita y transforma tu proyecto en una solución sostenible
+                    </button>
+                </div>    
             </div>
-            <div class="info-quienes-somos">
-                <h3>¿Quiénes somos?</h3>
-                <p>Somos un ecosistema que integra asesoría en investigación, incubación de startups y experiencia en soluciones reales, sostenibles y con impacto en Perú y LATAM</p>
-            </div>
-            <div class="proposito">
-                <img src="blancopunto.png" alt="punto blanco">
-                <h3>Propósito</h3>
-                <p>Acompañar a personas y organizaciones a transformar conocimiento, ideas y experiencia en soluciones reales que generen oportunidades, empleabilidad y desarrollo sostenible en Perú y LATAM.</p>
-            </div>
-            <button class="cta-button">Agenda tu sesión gratuita y transforma tu proyecto en una solución sostenible</button>
         </article>
     </section>
     <section class="nuestras-especialidades">
@@ -199,22 +214,22 @@
         <article class="container-impacto">
             <h2>Impacto que generamos</h2>
             <div class="impacto-grid">
-                <div class="impacto-item">
-                    <img src="estidiantes.png" alt="">
+                <div class="impacto-item-estudiantes">
+                    <img src="estudiantes.png" alt="">
                     <h3>Estudiantes</h3>
                     <p>Proyectos con proposito que fortalecen su perfil y empleabilidad.</p>
                 </div>
-                <div class="impacto-item">
+                <div class="impacto-item-profesionales">
                     <img src="profesionales.png" alt="">
                     <h3>Profesionales</h3>
                     <p>Investigaciones aplicadas que impulsan su carrera y fortalecen su valor profesional.</p>
                 </div>
-                <div class="impacto-item">
+                <div class="impacto-item-startups">
                     <img src="startups.png" alt="">
                     <h3>Startups</h3>
                     <p>Validación real para construir un modelo viable y escalable.</p>
                 </div>
-                <div class="impacto-item">
+                <div class="impacto-item-instituciones">
                     <img src="instituciones.png" alt="">
                     <h3>Universidades y Organizaciones</h3>
                     <p>Proyectos aplicados, pilotos y mejoras en experiencia y retención alineados a sostenibilidad y retos reales.</p>
