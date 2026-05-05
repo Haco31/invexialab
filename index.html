@@ -85,21 +85,21 @@
                 <div class="pilar">
                     <img src="educacion.png" alt="Educación">
                     <div class="pilar-info">
-                        <h3>Excelencia académica y estratégica</h3>
+                        <h3>Excelencia académica <br> y estratégica</h3>
                         <p>Metodologías rigurosas y aplicadas para lograr resultados de alto impacto</p>
                     </div>
                 </div>
                 <div class="pilar">
                     <img src="tecnologia.png" alt="Tecnología">
                     <div class="pilar-info">
-                        <h3>Tecnología con propósito</h3>
+                        <h3>Tecnología <br> con propósito</h3>
                         <p>Usamos herramientas y datos para tomar mejores decisiones.</p>
                     </div>
                 </div>
                 <div class="pilar">
                     <img src="sostenibilidad.png" alt="Sostenibilidad">
                     <div class="pilar-info">
-                        <h3>Sostenibilidad como eje transversal</h3>
+                        <h3>Sostenibilidad como <br> eje transversal</h3>
                         <p>Integramos el impacto social y ambiental en cada solución que creamos.</p>
                     </div>
                 </div>
@@ -439,23 +439,7 @@
             <p>&copy; 2026 InvexiaLab. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mainNav.classList.toggle('active');
-        });
-
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('#mainNav a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mainNav.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>

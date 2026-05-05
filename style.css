@@ -282,7 +282,7 @@ select {
 }
 
 .container-pilares h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -335,7 +335,7 @@ select {
 
 .pilar p {
     color: #666;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     line-height: 1.5;
     margin: 0;
 }
@@ -2128,6 +2128,7 @@ select {
 
     .formulario-card {
         padding: 20px;
+        margin-left: 45px;
     }
 
     .formulario-card input,
