@@ -326,13 +326,21 @@
         </article>
     </section>
     <section class="banner">
-        <article class="banner-form">
-            <img src="grupo-personas2.png" alt="Grupo de personas uniendo las manos">
-            <div class="container-banner">
+        <article class="banner-container">
+            <div class="banner-info">
                 <h2>Agenda tu sesión gratuita y transforma tu proyecto hoy</h2>
                 <p>Hablemos de tu idea y construyamos juntos soluciones con impacto</p>
-                <button class="cta-button"><img src="calendar.png" alt="">Agenda ahora</button>
-                <button class="cta-button"><img src="wts.png" alt="">Escribenos por WhatsApp</button>
+            </div>
+            <div class="banner-actions">
+                <a href="#" class="btn-agenda">
+                    <img src="calendar.png" alt="">Agenda ahora</button>
+                </a>
+                <a href="#" class="btn-wts">
+                    <img src="wts.png" alt="">Escribenos por WhatsApp</button>
+                </a>
+            </div>
+            <div class="banner-image">
+                <img src="grupo-personas2.png" alt="Grupo de personas uniendo las manos">
             </div>
         </article>
     </section>
@@ -340,13 +348,16 @@
         <div class="container-contacto">
             <div class="datos-contacto">
                 <h2>Déjanos ayudarte</h2>
-                <p>Completa el formulario y un especialista se comunicará contigo</p>
-                <img src="wts.png" alt="">
-                <p>+51 987 654 321</p>
-                <img src="mail.png" alt="">
-                <p>hola@invexialab.com.pe</p>
-                <img src="ubicacion.png" alt="">
-                <p>Lima, Perú</p>
+                <p class="subtitulo">Completa el formulario y un especialista se comunicará contigo</p>
+                <div class="info-item"><img src="wts.png" alt="">
+                    <p>+51 987 654 321</p>
+                </div>
+                <div class="info-item"><img src="mail.png" alt="">
+                    <p>hola@invexialab.com.pe</p>
+                </div>
+                <div class="info-item"><img src="ubicacion.png" alt="">
+                    <p>Lima, Perú</p>
+                </div>
                 <div class="redes-sociales">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                         <img src="icono-instagram.png" alt="Síguenos en Instagram" width="30">
@@ -361,18 +372,21 @@
                         <img src="icono-tiktok.png" alt="Síguenos en TikTok" width="30">
                     </a>
                 </div>
+            </div>
+            <div class="formulario-card">
                 <form action="">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="tel" name="telefono" placeholder="Teléfono">
-                    <div class="input-group">
-                        <label for="servicio">Servicio de interés</label>
-                        <select id="servicio" name="servicio" required>
-                            <option value="" disabled selected>Selecciona un servicio</option>
-                            <option value="asesoria">Asesoría en investigación</option>
-                            <option value="incubacion">Incubación de startups</option>
-                            <option value="experiencia">Retención y experiencia del cliente</option>
-                        </select>
+                    <div class="form-grid">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp">
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <div class="select-wrapper">
+                            <select required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="asesoria">Asesoría en investigación</option>
+                                <option value="incubacion">Incubación de startups</option>
+                                <option value="experiencia">Retención y experiencia del cliente</option>
+                            </select>
+                        </div>
                     </div>
                     <button type="submit" class="cta-button">Quiero que me contacten</button>
                 </form>
@@ -380,11 +394,11 @@
         </div>
     </section>
     <footer class="footer-inicio">
-        <article class="logo-footer">
-            <img src="logo.png" alt="Logo">
-        </article>
-        <article class="footer-info">
-            <div class="footer-nosotros">
+        <div class="container-footer">
+            <article class="logo-footer">
+                <img src="logo.png" alt="Logo">
+            </article>
+            <div class="footer-col">
                 <h3>Enlaces rápidos</h3>
                 <ul>
                     <li><a href="#">Inicio</a></li>
@@ -395,7 +409,7 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer-servicios">
+            <div class="footer-col">
                 <h3>Servicios</h3>
                 <ul>
                     <li><a href="#">Investigación</a></li>
@@ -403,18 +417,18 @@
                     <li><a href="#">Experiencia del Cliente</a></li>
                 </ul>
             </div>
-            <div class="footer-contacto">
+            <div class="footer-col">
                 <h3>Contacto</h3>
-                <ul>
+                <ul class="contacto-lista">
                     <li><img src="wts.png" alt=""><span>+51 987 654 321</span></li>
                     <li><img src="mail.png" alt=""><span>hola@invexialab.com.pe</span></li>
                     <li><img src="ubicacion.png" alt=""><span>Lima, Perú</span></li>
                 </ul>
             </div>
-        </article>
-        <article class="footer-copyright">
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 InvexiaLab. Todos los derechos reservados.</p>
-        </article>
+        </div>
     </footer>
 </body>
 
