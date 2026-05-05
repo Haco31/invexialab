@@ -15,6 +15,10 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
                 HEADER
@@ -1346,214 +1350,820 @@ select {
 
 /*-------------MediaQuery--------------*/
 
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.6rem !important;
-        margin-bottom: 30px !important;
+/* =============================================
+   Menú hamburguesa (oculto en desktop)
+   ============================================= */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animación del hamburguesa a X */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =============================================
+   TABLET — max-width: 1024px
+   ============================================= */
+
+@media (max-width: 1024px) {
+
+    /* --- HEADER --- */
+    .container-header {
+        padding: 0 3%;
     }
 
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    /* --- HERO --- */
     .container-hero {
         flex-direction: column;
-        align-items: center;
+        gap: 30px;
+        padding: 0 5%;
+    }
+
+    .hero-content {
+        flex: none;
+        max-width: 100%;
         text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        margin-right: 0;
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .hero-form-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* --- PILARES --- */
+    .pilares-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pilar:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    /* --- QUIÉNES SOMOS --- */
+    .quienes-somos-section {
+        padding: 40px 5%;
+    }
+
+    .container-quienes-somos {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .img-personas img {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    /* --- ESPECIALIDADES --- */
+    .nuestras-especialidades {
+        padding: 20px 5%;
+    }
+
+    /* --- METODOLOGÍA --- */
+    .metodologia {
+        padding: 20px 5%;
+    }
+
+    .pasos-container {
+        padding: 30px 10px;
+    }
+
+    .pasos-container::before {
+        left: 100px;
+        right: 100px;
+    }
+
+    .paso-item p {
+        max-width: 160px;
+        font-size: 0.8rem;
+    }
+
+    .paso-item h3 {
+        font-size: 1rem;
+    }
+
+    /* --- IMPACTO --- */
+    .container-impacto {
+        padding: 50px 5%;
+    }
+
+    .impacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .impacto-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .impacto-item:nth-child(3),
+    .impacto-item:nth-child(4) {
+        border-top: 1px solid #eee;
+    }
+
+    .impacto-item:last-child {
+        border-right: none;
+    }
+
+    /* --- TESTIMONIOS --- */
+    .testimonios {
+        padding: 50px 5%;
+    }
+
+    .testimonios-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonios-grid .testimonio-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    /* --- BANNER --- */
+    .banner-container {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .banner-info {
+        max-width: 100%;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .banner-actions {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .banner-img {
+        display: none;
+    }
+
+    /* --- CONTACTO --- */
+    .contacto {
+        padding: 50px 5%;
+    }
+
+    /* --- FOOTER --- */
+    .footer-inicio {
+        padding: 40px 5% 5px 5%;
+    }
+
+    .logo-footer {
+        flex: 0 0 25%;
+    }
+
+    .footer-col {
+        flex: 0 0 18%;
+    }
+}
+
+/* =============================================
+   TABLET PEQUEÑA / MÓVIL GRANDE — max-width: 768px
+   ============================================= */
+
+@media (max-width: 768px) {
+
+    /* --- HEADER + MENÚ HAMBURGUESA --- */
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--navy);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 30px 30px;
+        gap: 0;
+        transition: right 0.4s ease;
+        z-index: 1000;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li a.active {
+        border-bottom: 1px solid var(--verde);
+        padding-bottom: 15px;
+    }
+
+    nav .cta-button {
+        margin-top: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- HERO --- */
+    .hero {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .hero-buttons {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    /* --- Metodología (Los círculos con línea) --- */
+    .hero-buttons .cta-button,
+    .hero-buttons .secondary-button {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* --- PILARES --- */
+    .pilares-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pilar:last-child {
+        max-width: 100%;
+    }
+
+    .container-pilares h2 {
+        font-size: 2rem;
+    }
+
+    /* --- QUIÉNES SOMOS --- */
+    .bloques-texto {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .proposito {
+        flex-wrap: wrap;
+    }
+
+    .titulo-con-icono img {
+        width: 30px;
+    }
+
+    .cta-button-largo {
+        font-size: 0.85rem;
+        padding: 15px 20px;
+    }
+
+    /* --- ESPECIALIDADES --- */
+    .especialidades-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .container-especialidades h2 {
+        font-size: 1.8rem;
+    }
+
+    .especialidades-grid p {
+        min-height: auto;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-info h3 {
+        font-size: 1.15rem;
+    }
+
+    /* --- METODOLOGÍA --- */
     .pasos-container {
         flex-direction: column;
-        /* De fila a columna */
         align-items: center;
-        gap: 40px;
+        gap: 30px;
+        padding: 30px 20px;
     }
 
-    .pasos-container::before,
+    .pasos-container::before {
+        display: none;
+    }
+
     .pasos-container::after {
         display: none;
-        /* Es mejor ocultar las líneas decorativas en móvil para no estorbar */
     }
 
-    /* --- Impacto (Grid de 4 a 1 columna) --- */
+    .paso-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .paso-item h3 {
+        max-width: 100%;
+    }
+
+    .paso-item p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .numero {
+        left: -40px;
+        top: 25px;
+    }
+
+    /* --- IMPACTO --- */
     .impacto-grid {
         grid-template-columns: 1fr;
-        /* Una sola columna */
     }
 
     .impacto-item {
-        border-right: none;
+        border-right: none !important;
         border-bottom: 1px solid #eee;
-        /* La línea ahora es horizontal */
+        border-top: none !important;
     }
 
-    /* --- Testimonios (Tarjetas a 1 columna) --- */
+    .impacto-item:last-child {
+        border-bottom: none;
+    }
+
+    .container-impacto h2 {
+        font-size: 1.7rem;
+    }
+
+    /* --- TESTIMONIOS --- */
     .testimonios-grid {
         grid-template-columns: 1fr;
     }
 
+    .testimonios-grid .testimonio-card:last-child {
+        max-width: 100%;
+    }
+
     .testimonio-card {
         flex-direction: column;
-        /* Avatar arriba, texto abajo */
         align-items: center;
         text-align: center;
     }
 
     .testimonio-perfil {
-        width: 80px;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .pilares-grid {
-        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
     }
 
-    .especialidades-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .avatar {
+        width: 70px;
+        margin-bottom: 0;
     }
 
-    .impacto-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .testimonio-texto {
+        align-items: center;
     }
 
-    .impacto-item:nth-child(2n) {
-        border-right: none;
+    .testimonios h2 {
+        font-size: 1.7rem;
     }
 
-    .impacto-item {
-        border-bottom: 1px solid #eee;
-    }
-}
-
-@media (max-width: 600px) {
-    .pilares-grid {
-        grid-template-columns: 1fr;
+    /* --- BANNER --- */
+    .banner {
+        padding: 40px 0;
     }
 
-    .impacto-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .impacto-item {
-        border-right: none;
-    }
-
-    /* --- Banner --- */
-    .banner-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .banner-info {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .banner-info h2 {
+        font-size: 1.5rem;
     }
 
     .banner-actions {
         flex-direction: column;
-        /* Botones uno sobre otro */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn-agenda,
+    .btn-wts {
         width: 100%;
+        max-width: 280px;
+        justify-content: center;
     }
 
-    .banner-img img {
-        height: 150px;
-        /* Reducimos la imagen de las personas */
-        margin-bottom: 0;
-    }
-
-    /* --- Contacto --- */
+    /* --- CONTACTO --- */
     .container-contacto {
         flex-direction: column;
+        gap: 30px;
+    }
+
+    .formulario-card {
+        padding: 25px;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
-        /* Inputs uno debajo de otro */
+        gap: 15px;
+    }
+
+    /* --- FOOTER --- */
+    .container-footer {
+        flex-wrap: wrap;
+        gap: 30px 20px;
+    }
+
+    .logo-footer {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .logo-footer img {
+        width: 160px;
+    }
+
+    .footer-col {
+        flex: 0 0 calc(33% - 20px);
+    }
+}
+
+/* =============================================
+   CELULAR — max-width: 480px
+   ============================================= */
+
+@media (max-width: 480px) {
+
+    /* --- HEADER --- */
+    header {
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    /* --- HERO --- */
+    .hero {
+        padding: 20px 0;
+    }
+
+    .container-hero {
+        padding: 0 4%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        margin-top: 20px;
+    }
+
+    .hero-form-card {
+        padding: 15px;
+    }
+
+    .hero-form-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-form-card p {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    /* --- PILARES --- */
+    .nuestros-pilares {
+        padding: 30px 0;
+    }
+
+    .container-pilares {
+        padding: 0 4%;
+    }
+
+    .container-pilares h2 {
+        font-size: 1.6rem;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .pilar {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .pilar h3 {
+        font-size: 1.4rem;
+    }
+
+    .pilar img {
+        width: 40px;
+    }
+
+    /* --- QUIÉNES SOMOS --- */
+    .quienes-somos-section {
+        padding: 30px 4%;
+    }
+
+    .info-quienes-somos h3,
+    .proposito h3 {
+        font-size: 0.95rem;
+    }
+
+    .info-quienes-somos p,
+    .proposito p {
+        font-size: 0.85rem;
+    }
+
+    .cta-button-largo {
+        font-size: 0.78rem;
+        padding: 14px 15px;
+        gap: 10px;
+    }
+
+    .cta-button-largo img {
+        width: 18px;
+    }
+
+    /* --- ESPECIALIDADES --- */
+    .nuestras-especialidades {
+        padding: 30px 4%;
+    }
+
+    .container-especialidades h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        gap: 10px;
+    }
+
+    .main-icon {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .card-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-info p {
+        font-size: 0.8rem;
+    }
+
+    .lista-check li {
+        font-size: 0.82rem;
+    }
+
+    /* --- METODOLOGÍA --- */
+    .metodologia {
+        padding: 30px 4%;
+    }
+
+    .metodologia h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .icono-wrap {
+        width: 70px;
+        height: 70px;
+    }
+
+    .icono-wrap img {
+        width: 35px;
+    }
+
+    .numero {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+        left: -35px;
+        top: 20px;
+    }
+
+    .paso-item h3 {
+        font-size: 0.95rem;
+    }
+
+    .paso-item p {
+        font-size: 0.8rem;
+    }
+
+    /* --- IMPACTO --- */
+    .container-impacto {
+        padding: 30px 4%;
+    }
+
+    .container-impacto h2 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .icono-bg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icono-bg img {
+        width: 28px;
+    }
+
+    .impacto-texto h3 {
+        font-size: 1rem;
+    }
+
+    .impacto-texto p {
+        font-size: 0.8rem;
+    }
+
+    /* --- TESTIMONIOS --- */
+    .testimonios {
+        padding: 30px 4%;
+    }
+
+    .testimonios h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .testimonio-card {
+        padding: 20px;
+    }
+
+    .testimonio-perfil {
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 55px;
+    }
+
+    .nombre {
+        font-size: 0.8rem;
+    }
+
+    .cargo {
+        font-size: 0.7rem;
+    }
+
+    .testimonio-texto p {
+        font-size: 0.82rem;
+    }
+
+    /* --- BANNER --- */
+    .banner {
+        padding: 30px 0;
+    }
+
+    .banner-container {
+        padding: 15px 4%;
+    }
+
+    .banner-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .banner-info p {
+        font-size: 0.85rem;
+    }
+
+    .btn-agenda,
+    .btn-wts {
+        padding: 10px 15px;
+        font-size: 0.82rem;
+    }
+
+    /* --- CONTACTO --- */
+    .contacto {
+        padding: 30px 4%;
+    }
+
+    .datos-contacto h2 {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo {
+        font-size: 0.85rem;
     }
 
     .formulario-card {
         padding: 20px;
     }
 
-    /* --- Footer --- */
-    .container-footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
+    .formulario-card input,
+    .formulario-card select {
+        padding: 12px;
+        font-size: 0.85rem;
     }
 
-    .footer-col,
-    .logo-footer {
-        flex: 1 1 100%;
-        /* Que ocupen todo el ancho */
+    .btm-enviar {
+        padding: 14px;
+        font-size: 0.9rem;
     }
 
-    .footer-col:last-child {
-        margin-left: 0;
-        /* Quitamos el empuje a la derecha */
-    }
-}
-
-@media (max-width: 850px) {
-
-    .container-quienes-somos,
-    .bloques-texto {
-        grid-template-columns: 1fr;
-        /* Todo a una sola columna */
+    /* --- FOOTER --- */
+    .footer-inicio {
+        padding: 30px 4% 5px 4%;
     }
 
-    .container-contacto {
-        flex-direction: column;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .datos-contacto {
+    .footer-col {
+        flex: 0 0 100%;
         text-align: center;
     }
 
-    .info-item {
+    .footer-col h3 {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 8px;
+    }
+
+    .contacto-lista li {
         justify-content: center;
     }
 
-    .redes-sociales {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 1024px) {
-    .testimonios-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .testimonio-card {
-        max-width: 500px;
-        margin: 0 auto;
-    }
-
-    .banner-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .banner-info {
-        text-align: center;
-        max-width: 100%;
-    }
-
-    .banner-img {
-        justify-content: center;
-    }
-
-    .banner-img img {
-        height: 200px;
-        margin-bottom: 0;
+    .footer-bottom p {
+        font-size: 0.75rem;
     }
 }
