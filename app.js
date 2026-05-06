@@ -92,3 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+//===========campo número de telefono==========
+// Seleccionamos el campo por su nombre o ID
+const inputTelefono = document.querySelector('input[name="telefono"]');
+
+inputTelefono.addEventListener('input', function () {
+    // Reemplaza cualquier carácter que NO sea un número (0-9) con un vacío ""
+    this.value = this.value.replace(/[^0-9]/g, '');
+});

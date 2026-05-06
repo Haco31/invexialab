@@ -63,7 +63,8 @@
                 <form action="">
                     <input type="text" name="nombre" placeholder="Nombre completo" required>
                     <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                        title="Solo se permiten números (entre 9 y 15 dígitos)" required>
                     <div class="input-group">
                         <label for="servicio">Servicio de interés</label>
                         <select id="servicio" name="servicio" required>
@@ -396,7 +397,8 @@
                 <form action="">
                     <div class="form-grid">
                         <input type="text" name="nombre" placeholder="Nombre" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                            title="Solo se permiten números (entre 9 y 15 dígitos)" required>
                         <input type="email" name="email" placeholder="Correo electrónico" required>
                         <div class="select-wrapper">
                             <select name="servicio" required>
