@@ -1,3 +1,5 @@
+// acción para el menú hamburguesa
+
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -14,3 +16,79 @@ document.querySelectorAll('#mainNav a').forEach(link => {
     });
 });
 
+// acción para los formularios
+
+//[==================Formulario-1===============]
+//Implementación para formulario en google sheets.
+document.addEventListener('DOMContentLoaded', () => {
+    const contactoForm = document.querySelector('.hero-form-card form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbySeGcVBwBYp3oXMGFz2qr6wiI7nM3CSGriR6VM4IAqlNfVIRWlluvUuP_kSGHvqxYo/exec';
+    // Aquí la URL
+
+    if (contactoForm) {
+        contactoForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const boton = this.querySelector('button');
+            const textoOriginal = boton.textContent;
+            boton.textContent = 'Enviando...';
+            boton.disabled = true;
+
+            // Enviamos los datos usando POST
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(contactoForm)
+            })
+                .then(response => {
+                    alert('¡Datos guardados con éxito en nuestra base de datos!');
+                    contactoForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Hubo un error al guardar los datos.');
+                })
+                .finally(() => {
+                    boton.textContent = textoOriginal;
+                    boton.disabled = false;
+                });
+        });
+    }
+});
+
+
+//[==================Formulario-2===============]
+//Implementación para formulario en google sheets.
+document.addEventListener('DOMContentLoaded', () => {
+    const contactoForm = document.querySelector('.formulario-card form');
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbySeGcVBwBYp3oXMGFz2qr6wiI7nM3CSGriR6VM4IAqlNfVIRWlluvUuP_kSGHvqxYo/exec';
+    // Aquí la URL
+
+    if (contactoForm) {
+        contactoForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const boton = this.querySelector('button');
+            const textoOriginal = boton.textContent;
+            boton.textContent = 'Enviando...';
+            boton.disabled = true;
+
+            // Enviamos los datos usando POST
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(contactoForm)
+            })
+                .then(response => {
+                    alert('¡Datos guardados con éxito en nuestra base de datos!');
+                    contactoForm.reset();
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Hubo un error al guardar los datos.');
+                })
+                .finally(() => {
+                    boton.textContent = textoOriginal;
+                    boton.disabled = false;
+                });
+        });
+    }
+});
