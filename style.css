@@ -17,6 +17,18 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  padding-top: 80px;
+  /* Ajusta este número según cuánto mida tu header de alto */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px;
+  /* Debe ser igual al padding-top que le diste al body */
 }
 
 /*------------------------------------------------------------------------
@@ -29,6 +41,18 @@ header {
   background-color: var(--navy);
   padding: 20px 0;
   font-family: sans-serif;
+  position: fixed;
+  /* Esto hace que se quede pegado */
+  top: 0;
+  /* Lo fija en la parte superior */
+  left: 0;
+  /* Asegura que empiece desde la izquierda */
+  width: 100%;
+  /* Que ocupe todo el ancho */
+  z-index: 1000;
+  /* Para que siempre esté por encima de las imágenes y secciones */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Una sombra sutil para darle profundidad */
 }
 
 .container-header {
@@ -228,7 +252,7 @@ nav ul li a.active {
   color: #333;
   padding: 20px;
   border-radius: 20px;
-  width: 400px;
+  width: 450px;
   max-width: 100%;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
@@ -360,6 +384,52 @@ select {
   margin: 0;
 }
 
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Propuesta de Valor
+ --------------------------------------------------------------------------
+ -----------------------------------------------------------------------*/
+.propuesta-valor {
+  padding: 50px 120px;
+  background-color: #fcfcfc;
+}
+
+.container-propuesta {
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+}
+
+.propuesta-texto h2 {
+  color: black;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.propuesta-texto h3 {
+  font-size: 1.7rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.propuesta p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+.propuesta-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+}
+
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
                 Nuestros pilares
@@ -470,28 +540,36 @@ select {
 /*contenedor de la derecha*/
 .bloques-texto {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /*dos columnas para los textos*/
   gap: 30px;
   margin-bottom: 30px;
+  margin-top: 60px;
 }
 
 /*titulos en morado*/
 .info-quienes-somos h3,
 .proposito h3 {
   color: var(--morado);
-  text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
   text-align: left;
+
 }
 
 .info-quienes-somos p,
 .proposito p {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
   text-align: left;
+}
+
+.container-pilares h2 {
+  margin: 20px 0;
+}
+
+.container-pilares p {
+  margin-bottom: 20px;
+
 }
 
 /*alineación del icono de propósito*/
@@ -616,6 +694,7 @@ select {
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  margin-top: 30px;
   /* Quitamos el margin-bottom porque ahora están alineados horizontalmente */
 }
 
@@ -795,11 +874,9 @@ select {
   height: 8px;
   /* Este es el grosor de los puntos*/
   /*Degradado radial para crear círculos perfectos */
-  background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.4) 35%,
-    transparent 25%
-  );
+  background-image: radial-gradient(circle,
+      rgba(255, 255, 255, 0.4) 35%,
+      transparent 25%);
   /*Ajusta el primero valor (40px) para separar más o menos los puntos*/
   background-size: 10px 95%;
   background-repeat: repeat-x;
@@ -913,16 +990,16 @@ select {
  ------------------------------------------------------------------------*/
 
 .container-impacto {
-  padding: 50px 100px;
+  padding: 10px 100px 40px 100px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .container-impacto h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--navy);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /*grid de 4 columnas con separadores*/
@@ -970,7 +1047,7 @@ select {
 
 .impacto-texto h3 {
   font-size: 1.1rem;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   margin-top: 5px;
 }
 
@@ -1123,6 +1200,78 @@ select {
   font-style: italic;
 }
 
+
+/*------------------------------------------------------------------------
+ -------------------------------------------------------------------------
+                Preguntas frecuentes
+ --------------------------------------------------------------------------
+ ------------------------------------------------------------------------*/
+
+
+.preguntas-frecuentes {
+  padding: 50px 100px;
+  background-color: #fff;
+  color: var(--navy);
+}
+
+.container-faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container-faq h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.faq-item {
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #2a3644;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* El títuo de la pregunta */
+
+summary {
+  padding: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* flecha personalizada */
+summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #00d1b2;
+  transition: transform 0.3s ease;
+}
+
+/*cuando el acordeon esta abierto*/
+details[open] summary::after {
+  transform: rotate(180deg);
+}
+
+details[open] {
+  border-color: #00d1b2;
+}
+
+/*El contenido de la respuesta*/
+.faq-content {
+  padding: 20px;
+  color: #000000;
+  line-height: 1.6;
+  border-top: 1px solid #2a3644;
+}
+
+
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
                 banner
@@ -1148,17 +1297,13 @@ select {
   width: 30%;
   /*ocupamos el lado izquierdo*/
   height: 45%;
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.3) 1.5px,
-    transparent 1.5px
-  );
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1.5px,
+      transparent 1.5px);
   background-size: 18px 18px;
   /*Máscara que desvanece de izquierda a derecha*/
-  -webkit-mask-image: radial-gradient(
-    circle at top left,
-    black 10%,
-    transparent 50%
-  );
+  -webkit-mask-image: radial-gradient(circle at top left,
+      black 10%,
+      transparent 50%);
   mask-image: radial-gradient(circle at top left, black 10%, transparent 50%);
 
   pointer-events: none;
@@ -1171,9 +1316,12 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 100px;
-  position: relative;
-  z-index: 2;
+  padding: 20px 300px;
+  gap: 40px;
+}
+
+.banner-content {
+  flex: 1;
 }
 
 /*bloque de texto*/
@@ -1193,48 +1341,7 @@ select {
 .banner-info p {
   font-size: 1rem;
   opacity: 0.9;
-}
-
-/*bloque de botones*/
-.banner-actions {
-  flex: 1;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.btn-agenda,
-.btn-wts {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: transform 0.3s;
-}
-
-.btn-agenda {
-  background-color: white;
-  color: var(--morado);
-}
-
-.btn-wts {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-}
-
-.btn-agenda:hover,
-.btn-wts:hover {
-  transform: translateY(-3px);
-}
-
-.btn-agenda img,
-.btn-wts img {
-  width: 20px;
+  margin-bottom: 30px;
 }
 
 /*bloque de img*/
@@ -1242,7 +1349,7 @@ select {
   flex: 1;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: left;
 }
 
 .banner-image img {
@@ -1250,79 +1357,12 @@ select {
   width: 100%;
   max-width: 500px;
   height: auto;
+  border-radius: 20px;
 }
 
-/*------------------------------------------------------------------------
- -------------------------------------------------------------------------
-                Contacto
- --------------------------------------------------------------------------
- ------------------------------------------------------------------------*/
-
-.contacto {
-  padding: 50px 100px;
-  background-color: #fcfcfc;
-}
-
-.container-contacto {
-  max-width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-}
-
-/*columna izquierda*/
-.datos-contacto {
-  flex: 1;
-  text-align: left;
-}
-
-.datos-contacto h2 {
-  font-size: 2rem;
-  color: #051120;
-  margin-bottom: 10px;
-}
-
-.subtitulo {
-  color: #666;
-  margin-bottom: 30px;
-  font-size: 0.95;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 15px;
-}
-
-.info-item img {
-  width: 20px;
-  height: auto;
-}
-
-.info-item p {
-  margin: 0;
-  color: #333;
-  font-weight: 500;
-}
-
-.redes-sociales {
-  display: flex;
-  gap: 10px;
-  margin-top: 30px;
-  justify-content: flex-start;
-}
-
-.redes-sociales img {
-  width: 28px;
-  height: auto;
-  transition: transform 0.2s ease;
-}
-
-.redes-sociales img:hover {
-  transform: translateY(-3px);
+.banner-form-wrapper {
+  flex: 0 0 400px;
+  /* Ancho fijo para el formulario */
 }
 
 /*columna derecha(formulario)*/
@@ -1333,6 +1373,13 @@ select {
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
+  width: 650px;
+}
+
+.formulario-card h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #051120;
 }
 
 .form-grid {
@@ -1360,9 +1407,9 @@ select {
 }
 
 /*botón ancho completo */
-.btm-enviar {
+.cta-button {
   width: 100%;
-  background-color: var(--verde);
+  background-color: var(--amarillo);
   color: white;
   border: none;
   padding: 18px;
@@ -1373,8 +1420,8 @@ select {
   transition: background 0.3s;
 }
 
-.btn-enviar:hover {
-  background-color: #00634a;
+.cta-button:hover {
+  background-color: var(--crema);
 }
 
 /*------------------------------------------------------------------------
@@ -1427,6 +1474,13 @@ select {
   font-weight: 600;
 }
 
+.logo-footer p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-left: 20px;
+  margin-right: 60px;
+}
+
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -1469,6 +1523,118 @@ select {
 .footer-bottom p {
   font-size: 0.9rem;
   opacity: 0.7;
+}
+
+/*----------------- WhatsApp -------------*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  /* Distancia desde abajo */
+  right: 20px;
+  /* Distancia desde la derecha */
+  background-color: #1cb654;
+  /* Verde oficial de WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  /* Bordes muy redondeados para estilo cápsula */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  /* Para que siempre esté por encima de todo */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  /* Verde un poco más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  /* Crece un poquito */
+}
+
+.whatsapp-float img {
+  width: 25px;
+  height: 25px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+
+  /* En celulares muy pequeños, a veces es mejor dejar solo el icono */
+  .whatsapp-float span {
+    display: none;
+  }
+
+  .whatsapp-float {
+    padding: 15px;
+    border-radius: 50%;
+    /* Se vuelve un círculo perfecto */
+  }
+}
+
+/* ESTILOS DEL MODAL */
+/* El fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* Oscurece el fondo */
+  display: none;
+  /* Escondido por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  /* Por encima de todo, incluso del header */
+  backdrop-filter: blur(5px);
+  /* Efecto de desenfoque premium */
+
+}
+
+/* El contenedor del formulario */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  max-width: 680px;
+  width: 90%;
+  animation: aparecer 0.3s ease-out;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+@keyframes aparecer {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Botón de cerrar (X) */
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
 }
 
 /*-------------MediaQuery--------------*/
@@ -1515,6 +1681,7 @@ select {
    ============================================= */
 
 @media (max-width: 1024px) {
+
   /* --- HEADER --- */
   .container-header {
     padding: 0 3%;
@@ -1698,6 +1865,7 @@ select {
    ============================================= */
 
 @media (max-width: 768px) {
+
   /* --- HEADER + MENÚ HAMBURGUESA --- */
   .menu-toggle {
     display: flex;
@@ -1986,6 +2154,7 @@ select {
    ============================================= */
 
 @media (max-width: 480px) {
+
   /* --- HEADER --- */
   header {
     padding: 15px 0;
@@ -2037,7 +2206,44 @@ select {
   }
 
   .container-ventajas {
-    grid-template-columns: 1fr; /* Una sola columna en celulares pequeños */
+    grid-template-columns: 1fr;
+    /* Una sola columna en celulares pequeños */
+  }
+
+  .propuesta-valor {
+    padding: 60px 20px;
+  }
+
+  .container-propuesta {
+    grid-template-columns: 1fr;
+    /* Una sola columna */
+    width: 100%;
+    gap: 30px;
+  }
+
+  .propuesta-texto {
+    max-width: 100% !important;
+    text-align: left;
+    width: 100%;
+  }
+
+  .propuesta-texto h3 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .propuesta-texto p {
+    font-size: 1rem;
+    padding: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .propuesta-imagen img {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   /* --- PILARES --- */
@@ -2268,7 +2474,8 @@ select {
 
   .formulario-card {
     padding: 20px;
-    margin-left: 38px;
+    margin-left: 15px;
+    width: 350px;
   }
 
   .formulario-card input,
@@ -2306,6 +2513,10 @@ select {
 
   .footer-bottom p {
     font-size: 0.75rem;
+  }
+
+  .logo-footer p {
+    margin: auto;
   }
 }
 

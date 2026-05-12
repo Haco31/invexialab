@@ -25,24 +25,26 @@
             </button>
             <nav id="mainNav">
                 <ul>
-                    <li><a href="#" class="active">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Metodología</a></li>
-                    <li><a href="#">Impacto</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#metodologia">Metodología</a></li>
+                    <li><a href="#preguntas">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
-                <button class="cta-button">Agenda una reunión gratuita</button>
+                <button class="cta-button btn-abrir-modal">Agenda una reunión gratuita</button>
             </nav>
         </div>
     </header>
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="container-hero">
             <div class="hero-content">
-                <h1>Convierte tu investigación, idea o reto de servicio en una <span>solución real, validada y sostenible.</span></h1>
-                <p>Impulsamos investigación aplicada, startups y experiencia del cliente con enfoque sostenible a los ODS  en Perú y LATAM.</p>
+                <h1>Convierte tu investigación, idea o reto de servicio en una <span>solución real, validada y
+                        sostenible.</span></h1>
+                <p>Impulsamos investigación aplicada, startups y experiencia del cliente con enfoque sostenible a los
+                    ODS en Perú y LATAM.</p>
                 <div class="hero-buttons">
-                    <button class="cta-button">
+                    <button class="cta-button btn-abrir-modal">
                         <img src="img_web/calendar.png" alt="calendario">
                         Agenda tu diagnóstico gratuito
                     </button>
@@ -103,69 +105,23 @@
             </div>
         </div>
     </section>
-
-    <section class="nuestros-pilares">
-        <article class="container-pilares">
-            <h2>Nuestros pilares</h2>
-            <div class="pilares-grid">
-                <div class="pilar">
-                    <img src="img_web/educacion.png" alt="Educación">
-                    <div class="pilar-info">
-                        <h3>Excelencia académica <br> y estratégica</h3>
-                        <p>Metodologías rigurosas y aplicadas para lograr resultados de alto impacto</p>
-                    </div>
-                </div>
-                <div class="pilar">
-                    <img src="img_web/tecnologia.png" alt="Tecnología">
-                    <div class="pilar-info">
-                        <h3>Tecnología <br> con propósito</h3>
-                        <p>Usamos herramientas y datos para tomar mejores decisiones.</p>
-                    </div>
-                </div>
-                <div class="pilar">
-                    <img src="img_web/sostenibilidad.png" alt="Sostenibilidad">
-                    <div class="pilar-info">
-                        <h3>Sostenibilidad como <br> eje transversal</h3>
-                        <p>Integramos el impacto social y ambiental en cada solución que creamos.</p>
-                    </div>
-                </div>
+    <section class="propuesta-valor">
+        <div class="container-propuesta">
+            <div class="propuesta-texto">
+                <h2>Propuesta de Valor</h2>
+                <h3>Tres caminos, un mismo objetivo: convertir conocimiento, ideas y experiencia en resultados.</h3>
+                <p>En InvexiaLab integramos investigación aplicada, startups y experiencia del cliente para ayudarte a
+                    avanzar con claridad, estructura y visión de impacto</p>
             </div>
-        </article>
-        <article class="quienes-somos-section">
-            <div class="container-quienes-somos">
-                <div class="img-personas">
-                    <img src="img_web/reunion_personas.png" alt="reunion de personas">
-                </div>
-                <div class="contenido-derecho">
-                    <div class="bloques-texto">
-                        <div class="info-quienes-somos">
-                            <h3>¿Quiénes somos?</h3>
-                            <p>Somos un ecosistema que integra asesoría en investigación, incubación de startups y
-                                experiencia en soluciones reales, sostenibles y con impacto en Perú y LATAM</p>
-                        </div>
-                        <div class="proposito">
-                            <div class="titulo-con-icono">
-                                <img src="img_web/target.png" alt="punto blanco">
-                            </div>
-                            <div class="texto-proposito">
-                                <h3>Nuestro Propósito</h3>
-                                <p>Acompañar a personas y organizaciones a transformar conocimiento, ideas y experiencia
-                                    en soluciones reales que generen oportunidades, empleabilidad y desarrollo
-                                    sostenible en Perú y LATAM.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="cta-button-largo">
-                        <img src="img_web/sesion.png" alt="">
-                        Agenda tu sesión gratuita y transforma tu proyecto en una solución sostenible
-                    </button>
-                </div>
+            <div class="propuesta-imagen">
+                <img src="propuesta-valor.png" alt="Imagen Propuesta de valor">
             </div>
-        </article>
+        </div>
     </section>
-    <section class="nuestras-especialidades">
+
+    <section class="nuestras-especialidades" id="servicios">
         <article class="container-especialidades">
-            <h2>Nuestras especialidades</h2>
+            <h2>Servicios Principales</h2>
             <div class="especialidades-grid">
                 <div class="investigacion-card">
                     <div class="card-header">
@@ -173,9 +129,10 @@
                             <img src="img_web/book.png" alt="Investigación" class="main-icon">
                         </div>
                         <div class="card-info">
-                            <h3>Proyectos de <br> investigación</h3>
-                            <p>Somos un ecosistema que integra la definición del tema, el diseño metodológico, la
-                                validación y la presentación final.</p>
+                            <h3>Investigación Aplicada</h3>
+                            <p>Desarrollamos Proyectos con estructura, enfoque metodológico y acompañamiento experto
+                                para convertir ideas en propuestas sólidas, relevantes y, cuando aplica, alineadas a los
+                                Objetivos de Desarrollo Sostenible (ODS).</p>
                         </div>
                     </div>
                     <ul class="lista-check">
@@ -184,7 +141,7 @@
                         <li><img src="img_web/palomita_azul.png" alt=""> Validación y análisis</li>
                         <li><img src="img_web/palomita_azul.png" alt=""> Preparación de sustentación</li>
                     </ul>
-                    <button class="cta-button">Quiero asesoría en mi investigación</button>
+                    <button class="cta-button btn-abrir-modal">Quiero impulsar mi proyecto</button>
                 </div>
                 <div class="incubacion-card">
                     <div class="card-header">
@@ -192,8 +149,9 @@
                             <img src="img_web/space.png" alt="Incubación" class="main-icon">
                         </div>
                         <div class="card-info">
-                            <h3>Incubación de<br>startups</h3>
-                            <p>De la idea y propuesta de valor al MVP a la validación real del mercado.</p>
+                            <h3>Startups</h3>
+                            <p>Impulsamos ideas con potencial de crecimiento mediante propuesta de calor, calidación,
+                                modelo de negocio y acompañamiento para su activación.</p>
                         </div>
                     </div>
                     <ul class="lista-check">
@@ -202,7 +160,7 @@
                         <li><img src="img_web/palomita_morado.png" alt=""> MVP y validación</li>
                         <li><img src="img_web/palomita_morado.png" alt=""> Pitch y acompañamiento</li>
                     </ul>
-                    <button class="cta-button">Quiero lanzar mi startup</button>
+                    <button class="cta-button btn-abrir-modal">Quiero desarrollar mi startup</button>
                 </div>
                 <div class="experiencia-card">
                     <div class="card-header">
@@ -210,9 +168,9 @@
                             <img src="img_web/users.png" alt="Experiencia" class="main-icon">
                         </div>
                         <div class="card-info">
-                            <h3>Retención y experiencia del cliente</h3>
-                            <p>Diagnosticos a personas y procesos, comunicación y servicio para elevar satisfacción,
-                                difelización y resultados.</p>
+                            <h3>Experiencia del cliente</h3>
+                            <p>Diseñamos estrategias orientadas a mejorar procesos, puntos de contacto, satisfacción,
+                                retención y fidelización.</p>
                         </div>
                     </div>
                     <ul class="lista-check">
@@ -221,59 +179,64 @@
                         <li><img src="img_web/palomita_verde.png" alt=""> Estrategia de retención</li>
                         <li><img src="img_web/palomita_verde.png" alt=""> KPI's y medición</li>
                     </ul>
-                    <button class="cta-button">Quiero mejorar mi servicio</button>
+                    <button class="cta-button btn-abrir-modal">Quiero mejorar mi experiencia</button>
                 </div>
             </div>
         </article>
     </section>
-    <section class="metodologia">
-        <h2>Nuestra metodología</h2>
-        <ol class="pasos-container">
-            <li class="paso-item">
-                <div class="icono-wrap">
-                    <span class="numero">1</span>
-                    <img src="img_web/lupa.png" alt="Icono diagnóstico">
+    <section class="nuestros-pilares" id="nosotros">
+        <article class="quienes-somos-section">
+            <div class="container-quienes-somos">
+                <div class="img-personas">
+                    <img src="img_web/reunion_personas.png" alt="reunion de personas">
                 </div>
-                <h3>Diagnóstico y enfoque</h3>
-                <p>Definimos problema, objetivos y alcance alineados a la realidad del entorno</p>
-            </li>
-            <li class="paso-item">
-                <div class="icono-wrap">
-                    <span class="numero">2</span>
-                    <img src="img_web/apuntes.png" alt="Icono apuntes">
+                <div class="contenido-derecho">
+                    <div class="bloques-texto">
+                        <div class="info-quienes-somos">
+                            <h3>Somos InvexiaLab</h3>
+                            <p>Somos un ecosistema que integra investigación de proyectos, incubación de startups y
+                                experiencia del cliente para transformar ideas en soluciones sostenibles y con impacto
+                                en Perú y LATAM, incluyendo proyectos alineados con los ODS.</p>
+                        </div>
+
+                    </div>
                 </div>
-                <h3>Diseño y estructura</h3>
-                <p>Construimos el plan (metodología o modelo de negocio) con entregables por etapa.</p>
-            </li>
-            <li class="paso-item">
-                <div class="icono-wrap">
-                    <span class="numero">3</span>
-                    <img src="img_web/desarrollo.png" alt="Icono desarrollo">
+            </div>
+        </article>
+        <article class="container-pilares">
+            <h2>¿Por qué InvexiaLab?</h2>
+            <p>No solo acompañamos procesos, ayudamos a convertirl ideas, proyectos y desafios en soluciones reales,
+                sostenibles y accionables.</p>
+            <div class="pilares-grid">
+                <div class="pilar">
+                    <img src="img_web/educacion.png" alt="Educación">
+                    <div class="pilar-info">
+                        <h3>Excelencia académica <br> y estratégica</h3>
+                        <p>Aplicamos metodologías rigurosas orientadas a resultados concretos.</p>
+                    </div>
                 </div>
-                <h3>Desarrollo guiado</h3>
-                <p>Acompañamiento continuo con retroalimentacipon y control de avance.</p>
-            </li>
-            <li class="paso-item">
-                <div class="icono-wrap">
-                    <span class="numero">4</span>
-                    <img src="img_web/validacion.png" alt="Icono validación">
+                <div class="pilar">
+                    <img src="img_web/tecnologia.png" alt="Tecnología">
+                    <div class="pilar-info">
+                        <h3>Tecnología <br> con propósito</h3>
+                        <p>Usamos herramientas y datos para impulsar mejores decisiones.</p>
+                    </div>
                 </div>
-                <h3>Validación y calidad</h3>
-                <p>Revisión rigurosa de coherencia, originalidad, evidencia y viabilidad.</p>
-            </li>
-            <li class="paso-item">
-                <div class="icono-wrap">
-                    <span class="numero">5</span>
-                    <img src="img_web/cierre.png" alt="Icono cierre">
+                <div class="pilar">
+                    <img src="img_web/sostenibilidad.png" alt="Sostenibilidad">
+                    <div class="pilar-info">
+                        <h3>Sostenibilidad <br> transversal</h3>
+                        <p>Integramos impacto, visión de futuro y valor en cada solución, incluyendo proyectos de
+                            investigación alineados a los Objetivos de Desarrollo Sostenible (ODS).</p>
+                    </div>
                 </div>
-                <h3>Cierre y activación</h3>
-                <p>Dejamos tu proyecto listo para ejecutar; entrega, sustentación o implementación con KPI´s.</p>
-            </li>
-        </ol>
+            </div>
+        </article>
     </section>
     <section class="impacto">
         <article class="container-impacto">
-            <h2>Impacto que generamos</h2>
+            <h2>Trabajamos con estudiantes, profesionales y organizaciones que buscan transformar ideas, proyectos y
+                desaios en soluciones reales.</h2>
             <div class="impacto-grid">
                 <div class="impacto-item item-azul">
                     <div class="icono-bg">
@@ -281,7 +244,8 @@
                     </div>
                     <div class="impacto-texto">
                         <h3>Estudiantes</h3>
-                        <p>Proyectos con propósito que fortalecen su perfil y empleabilidad.</p>
+                        <p>Para quienes buscan desarrollar investigaciones sólidas, aplicadas y bien orientadas desde el
+                            inicio.</p>
                     </div>
                 </div>
 
@@ -291,7 +255,8 @@
                     </div>
                     <div class="impacto-texto">
                         <h3>Profesionales</h3>
-                        <p>Investigaciones aplicadas que impulsan su carrera y fortalecen su valor profesional.</p>
+                        <p>Para quienes desean transformar conocimientos y experiencia en propuestas, proyectos o nuevas
+                            oportunidades.</p>
                     </div>
                 </div>
 
@@ -301,7 +266,8 @@
                     </div>
                     <div class="impacto-texto">
                         <h3>Startups</h3>
-                        <p>Validación real para construir un modelo viable y escalable.</p>
+                        <p>Para quienes buscan convertir ideas en modelos viables, validar su propuesta de valor y
+                            avanzar hacia soluciones escalables.</p>
                     </div>
                 </div>
                 <div class="impacto-item item-naranja">
@@ -309,137 +275,184 @@
                         <img src="img_web/instituciones.png" alt="Instituciones">
                     </div>
                     <div class="impacto-texto">
-                        <h3>Universidades y Organizaciones</h3>
-                        <p>Proyectos aplicados, pilotos y mejoras en experiencia y retención.</p>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article class="testimonios">
-            <div class="container-testimonios">
-                <h2>Ellos ya transformaron sus ideas</h2>
-                <div class="testimonios-grid">
-                    <div class="testimonio-card">
-                        <div class="testimonio-perfil">
-                            <img src="img_web/mario.jpg" alt="Mario G." class="avatar">
-                            <div class="autor-info">
-                                <span class="nombre">Mario G.</span>
-                                <span class="cargo">Ingeniero Ambiental</span>
-                            </div>
-                        </div>
-                        <!-- Columna Derecha: Comillas y Párrafo -->
-                        <div class="testimonio-texto">
-                            <img src="img_web/comillas.png" alt="" class="comillas">
-                            <p>Gracias a InvexiaLab logré terminar mi tesis y sustentar con éxito. El acompañamiento
-                                fue clave en todo el proceso.</p>
-                        </div>
-                    </div>
-                    <div class="testimonio-card">
-                        <div class="testimonio-perfil">
-                            <img src="img_web/lucia.jpg" alt="Lucia R." class="avatar">
-                            <div class="autor-info">
-                                <span class="nombre">Lucia R.</span>
-                                <span class="cargo">Founder de GreenBox</span>
-                            </div>
-                        </div>
-                        <div class="testimonio-texto">
-                            <img src="img_web/comillas.png" alt="" class="comillas">
-                            <p>Validé mi idea de negocio y hoy tengo mis primeros clientes. El programa de incubación me
-                                dio claridad y dirección.</p>
-                        </div>
-                    </div>
-                    <div class="testimonio-card">
-                        <div class="testimonio-perfil">
-                            <img src="img_web/carlos.jpg" alt="Carlos M." class="avatar">
-                            <div class="autor-info">
-                                <span class="nombre">Carlos M.</span>
-                                <span class="cargo">Gerente Comercial</span>
-                            </div>
-                        </div>
-                        <div class="testimonio-texto">
-                            <img src="img_web/comillas.png" alt="" class="comillas">
-                            <p>Me ayudaron a mejorar la experiencia de nuestros clientes y aumentamos nuestra tasa de
-                                retención en 35% en 6 meses.</p>
-                        </div>
+                        <h3>Organizaciones</h3>
+                        <p>Para instituciones y empresas que buscan fortalecer la experiencia, la retención, la
+                            innovación y la conexión con sus públicos.</p>
                     </div>
                 </div>
             </div>
         </article>
     </section>
-    <section class="banner">
-        <article class="banner-container">
-            <div class="banner-info">
-                <h2>Agenda tu sesión gratuita y transforma tu proyecto hoy</h2>
-                <p>Hablemos de tu idea y construyamos juntos soluciones con impacto</p>
-            </div>
-            <div class="banner-actions">
-                <a href="#" class="btn-agenda">
-                    <img src="img_web/Calendar-1.png" alt="">Agenda ahora</button>
-                </a>
-                <a href="https://api.whatsapp.com/send/?phone=51986848623&text&type=phone_number&app_absent=0"
-                    class="btn-wts">
-                    <img src="img_web/wts.png" alt="">Escribenos por WhatsApp</button>
-                </a>
-            </div>
-            <div class="banner-image">
-                <img src="img_web/manos.png" alt="Grupo de personas uniendo las manos">
-            </div>
-        </article>
+
+    <section class="metodologia" id="metodologia">
+        <h2>Nuestra metodología</h2>
+        <ol class="pasos-container">
+            <li class="paso-item">
+                <div class="icono-wrap">
+                    <span class="numero">1</span>
+                    <img src="img_web/lupa.png" alt="Icono diagnóstico">
+                </div>
+                <h3>Diagnóstico</h3>
+                <p>Entendemos tu necesidad, contexto y objetivo para definir la mejor ruta.</p>
+            </li>
+            <li class="paso-item">
+                <div class="icono-wrap">
+                    <span class="numero">2</span>
+                    <img src="img_web/apuntes.png" alt="Icono apuntes">
+                </div>
+                <h3>Diseño estratégico</h3>
+                <p>Estructuramos la propuesta, los entregables y el enfoque de trabajo.</p>
+            </li>
+            <li class="paso-item">
+                <div class="icono-wrap">
+                    <span class="numero">3</span>
+                    <img src="img_web/desarrollo.png" alt="Icono desarrollo">
+                </div>
+                <h3>Desarrollo y acompañamiento</h3>
+                <p>Avanzamos contigo con seguimiento, revisión experta y retroalimentación continua.</p>
+            </li>
+            <li class="paso-item">
+                <div class="icono-wrap">
+                    <span class="numero">4</span>
+                    <img src="img_web/validacion.png" alt="Icono validación">
+                </div>
+                <h3>Validación y cierre</h3>
+                <p>Dejamos tu proyecto listo para presentar, activar, implementar o escalar.</p>
+            </li>
+        </ol>
     </section>
-    <section class="contacto">
-        <div class="container-contacto">
-            <div class="datos-contacto">
-                <h2>Déjanos ayudarte</h2>
-                <p class="subtitulo">Completa el formulario y un especialista se comunicará contigo</p>
-                <div class="info-item"><img src="img_web/chat1.png" alt="">
-                    <p>+51 987 654 321</p>
-                </div>
-                <div class="info-item"><img src="img_web/mail.png" alt="">
-                    <p>hola@invexialab.com.pe</p>
-                </div>
-                <div class="info-item"><img src="img_web/location.png" alt="">
-                    <p>Lima, Perú</p>
-                </div>
-                <div class="redes-sociales">
-                    <a href="https://www.instagram.com/invexialab_/" target="_blank" rel="noopener noreferrer">
-                        <img src="img_web/instagram.png" alt="Síguenos en Instagram" width="30">
-                    </a>
-                    <a href="https://www.facebook.com/61578861992732" target="_blank" rel="noopener noreferrer">
-                        <img src="img_web/face.png" alt="Escríbenos por WhatsApp" width="30">
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <img src="img_web/linkedin.png" alt="Síguenos en LinkedIn" width="30">
-                    </a>
-                    <a href="https://www.tiktok.com/@invexialab" target="_blank" rel="noopener noreferrer">
-                        <img src="img_web/tiktok.png" alt="Síguenos en TikTok" width="30">
-                    </a>
-                </div>
-            </div>
-            <div class="formulario-card">
-                <form action="">
-                    <div class="form-grid">
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
-                            title="Solo se permiten números (entre 9 y 15 dígitos)" required>
-                        <input type="email" name="email" placeholder="Correo electrónico" required>
-                        <div class="select-wrapper">
-                            <select name="servicio" required>
-                                <option value="" disabled selected>Selecciona un servicio</option>
-                                <option value="asesoria">Asesoría en investigación</option>
-                                <option value="incubacion">Incubación de startups</option>
-                                <option value="experiencia">Retención y experiencia del cliente</option>
-                            </select>
+    <article class="testimonios">
+        <div class="container-testimonios">
+            <h2>Lo que dicen quienes confiaron en nosotros</h2>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-perfil">
+                        <img src="img_web/mario.jpg" alt="Mario G." class="avatar">
+                        <div class="autor-info">
+                            <span class="nombre">Mario G.</span>
+                            <span class="cargo">Ingeniero Ambiental</span>
                         </div>
                     </div>
-                    <button type="submit" class="cta-button">Quiero que me contacten</button>
-                </form>
+                    <!-- Columna Derecha: Comillas y Párrafo -->
+                    <div class="testimonio-texto">
+                        <img src="img_web/comillas.png" alt="" class="comillas">
+                        <p>Gracias a InvexiaLab logré terminar mi tesis y sustentar con éxito. El acompañamiento
+                            fue clave en todo el proceso.</p>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-perfil">
+                        <img src="img_web/lucia.jpg" alt="Lucia R." class="avatar">
+                        <div class="autor-info">
+                            <span class="nombre">Lucia R.</span>
+                            <span class="cargo">Founder de GreenBox</span>
+                        </div>
+                    </div>
+                    <div class="testimonio-texto">
+                        <img src="img_web/comillas.png" alt="" class="comillas">
+                        <p>Validé mi idea de negocio y hoy tengo mis primeros clientes. El programa de incubación me
+                            dio claridad y dirección.</p>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-perfil">
+                        <img src="img_web/carlos.jpg" alt="Carlos M." class="avatar">
+                        <div class="autor-info">
+                            <span class="nombre">Carlos M.</span>
+                            <span class="cargo">Gerente Comercial</span>
+                        </div>
+                    </div>
+                    <div class="testimonio-texto">
+                        <img src="img_web/comillas.png" alt="" class="comillas">
+                        <p>Me ayudaron a mejorar la experiencia de nuestros clientes y aumentamos nuestra tasa de
+                            retención en 35% en 6 meses.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </article>
+    </section>
+    <section class="preguntas-frecuentes" id="preguntas">
+        <div class="container-faq">
+            <h2>Preguntas frecuentes</h2>
+            <p></p>Resolvemos las dudas más comunes para que avances con mayor claridad.</p>
+            <details class="faq-item">
+                <summary>¿Qué servicios ofrece InvexiaLab?</summary>
+                <div class="faq-content">
+                    <p>Impulsamos investigación aplicada, startups y experiencia del cliente con enfoque sostenible para
+                        estudiantes, profesionales y organizaciones.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Pueden acompañarme si mi proyecto recién está empezando?</summary>
+                <div class="faq-content">
+                    <p>Sí. Podemos ayudarte desde la etapa inicial para definir el enfoque, estructurar la propuesta y
+                        avanzar con una ruta clara.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿También trabajan ideas de negocio o startups?</summary>
+                <div class="faq-content">
+                    <p>Sí. Acompañamos procesos de validación, propuesta de valor, modelo de negocio y desarrollo de
+                        soluciones con potencial de crecimiento.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿InvexiaLab brinda soluciones para empresas y organizaciones?</summary>
+                <div class="faq-content">
+                    <p>Sí. Diseñamos estrategias orientadas a mejorar experiencia, retención, innovación y conexión con
+                        sus públicos.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cómo puedo iniciar?</summary>
+                <div class="faq-content">
+                    <p>Solo debes completar el formulario y nos pondremos en contacto contigo para orientarte y definir
+                        la mejor ruta según tu necesidad.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+    <section class="banner" id="contacto">
+        <article class="banner-container">
+            <div class="banner-content">
+                <div class="banner-info">
+                    <h2>Agenda tu sesión gratuita y transforma tu proyecto hoy</h2>
+                    <p>Hablemos de tu idea y construyamos juntos soluciones con impacto</p>
+                </div>
+                <div class="banner-image">
+                    <img src="img_web/manos.png" alt="Grupo de personas uniendo las manos">
+                </div>
+            </div>
+            <div class="banner-form-wapper">
+                <div class="formulario-card">
+                    <h3>Agenda tu sesión</h3>
+                    <form action="">
+                        <div class="form-grid">
+                            <input type="text" name="nombre" placeholder="Nombre" required>
+                            <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                                required>
+                            <input type="email" name="email" placeholder="Correo electrónico" required>
+                            <div class="select-wrapper">
+                                <select name="servicio" required>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option value="asesoria">Investigación aplicada</option>
+                                    <option value="incubacion">Startups</option>
+                                    <option value="experiencia">Experiencia del cliente</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submt" class="cta-button">Quiero que me contacten</button>
+                    </form>
+                </div>
+            </div>
     </section>
     <footer class="footer-inicio">
         <div class="container-footer">
             <article class="logo-footer">
                 <img src="img_web/logo.png" alt="Logo">
+                <p>Impulsamos investigación aplicada, startups y experiencia del cliente con enfoque sostenible en Perú
+                    y LATAM.</p>
             </article>
             <div class="footer-col">
                 <h3>Enlaces rápidos</h3>
@@ -463,7 +476,7 @@
             <div class="footer-col">
                 <h3>Contacto</h3>
                 <ul class="contacto-lista">
-                    <li><img src="img_web/wts2.png" alt=""><span>+51 987 654 321</span></li>
+                    <li><img src="img_web/wts2.png" alt=""><span>+51 986 848 623</span></li>
                     <li><img src="img_web/mail.png" alt=""><span>hola@invexialab.com.pe</span></li>
                     <li><img src="img_web/location.png" alt=""><span>Lima, Perú</span></li>
                 </ul>
@@ -473,6 +486,42 @@
             <p>&copy; 2026 InvexiaLab. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!--Boton flotante para whatsapp-->
+    <a href="https://wa.me/51986848623?text=Hola%20InvexiaLab,%20me%20gustaría%20más%20información"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <span>Contactanos</span>
+        <img src="img_web/wts2.png" alt="WhatsApp">
+    </a>
+
+    <!-- Estructura del Modal para el formulario-->
+    <div id="modal-contacto" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="formulario-card">
+                <h3>Agenda tu sesión gratuita</h3>
+                <p>Completa tus datos y nos pondremos en contacto.</p>
+                <form id="form-modal">
+                    <div class="form-grid">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                            required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <div class="select-wrapper">
+                            <select name="servicio" required>
+                                <option value="" disabled selected>Selecciona un servicio</option>
+                                <option value="asesoria">Investigación aplicada</option>
+                                <option value="incubacion">Startups</option>
+                                <option value="experiencia">Experiencia del cliente</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 

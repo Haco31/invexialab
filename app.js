@@ -101,3 +101,31 @@ inputTelefono.addEventListener('input', function () {
     // Reemplaza cualquier carácter que NO sea un número (0-9) con un vacío ""
     this.value = this.value.replace(/[^0-9]/g, '');
 });
+
+//===========modal==========
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-contacto');
+    const botonesAbrir = document.querySelectorAll('.btn-abrir-modal'); // Selecciona todos los botones
+    const botonCerrar = document.querySelector('.close-modal');
+
+    // Abrir modal al hacer clic en cualquier botón con esa clase
+    botonesAbrir.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Cerrar modal al darle a la X
+    botonCerrar.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar si hacen clic fuera del formulario (en el fondo oscuro)
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
