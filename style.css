@@ -1,8 +1,15 @@
 :root {
   --crema: #ffdd9a;
-  --amarillo: #ffa902;
-  --navy: #000e47;
-  --azul: #153fb7;
+  --amarillo: #FFA902;
+  --amarillo80: #FFBA35;
+  --amarillo60: #FFCB67;
+  --amarillo40: #FFDD9A;
+  --amarillo20: #FFEECC;
+  --navy: #000E47;
+  --azul80: #333E6C;
+  --azul60: #666E91;
+  --azul40: #999FB5;
+  --azul20: #CCCFDA;
   --fucsia: #9857df;
   --verde: #027e59;
   --morado: #7f00a9;
