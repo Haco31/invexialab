@@ -1,15 +1,15 @@
 :root {
   --crema: #ffdd9a;
-  --amarillo: #FFA902;
-  --amarillo80: #FFBA35;
-  --amarillo60: #FFCB67;
-  --amarillo40: #FFDD9A;
-  --amarillo20: #FFEECC;
-  --navy: #000E47;
-  --azul80: #333E6C;
-  --azul60: #666E91;
-  --azul40: #999FB5;
-  --azul20: #CCCFDA;
+  --amarillo: #ffa902;
+  --amarillo80: #ffba35;
+  --amarillo60: #ffcb67;
+  --amarillo40: #ffdd9a;
+  --amarillo20: #ffeecc;
+  --navy: #041764;
+  --azul80: #333e6c;
+  --azul60: #666e91;
+  --azul40: #999fb5;
+  --azul20: #cccfda;
   --fucsia: #9857df;
   --verde: #027e59;
   --morado: #7f00a9;
@@ -27,7 +27,6 @@ body {
   padding-top: 80px;
   /* Ajusta este número según cuánto mida tu header de alto */
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -355,7 +354,7 @@ select {
 
 .ventajas {
   padding: 50px 0;
-  background-color: #ffffff;
+  background-color: #cccfda;
 }
 
 .container-ventajas {
@@ -390,7 +389,6 @@ select {
   font-weight: 600;
   margin: 0;
 }
-
 
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
@@ -434,7 +432,7 @@ select {
   width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 /*------------------------------------------------------------------------
@@ -523,7 +521,7 @@ select {
 
 .quienes-somos-section {
   padding: 50px 100px;
-  background-color: #f4f7f6;
+  background-color: #cccfda;
 }
 
 .container-quienes-somos {
@@ -559,7 +557,6 @@ select {
   font-size: 2.5rem;
   margin-bottom: 15px;
   text-align: left;
-
 }
 
 .info-quienes-somos p,
@@ -576,7 +573,6 @@ select {
 
 .container-pilares p {
   margin-bottom: 20px;
-
 }
 
 /*alineación del icono de propósito*/
@@ -676,7 +672,7 @@ select {
 }
 
 .investigacion-card .card-header .circulo-icon {
-  background-color: var(--azul);
+  background-color: var(--azul80);
 }
 
 .incubacion-card .card-header .circulo-icon1 {
@@ -786,11 +782,11 @@ select {
 }
 
 .investigacion-card h3 {
-  color: var(--azul);
+  color: var(--azul80);
 }
 
 .investigacion-card .cta-button {
-  background-color: var(--azul);
+  background-color: var(--azul80);
   color: white;
 }
 
@@ -876,14 +872,16 @@ select {
   position: absolute;
   top: 75px;
   /*Alineada al centro de los circulos blancos*/
-  left: 190px;
-  right: 200px;
+  left: 220px;
+  right: 220px;
   height: 8px;
   /* Este es el grosor de los puntos*/
   /*Degradado radial para crear círculos perfectos */
-  background-image: radial-gradient(circle,
-      rgba(255, 255, 255, 0.4) 35%,
-      transparent 25%);
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 35%,
+    transparent 25%
+  );
   /*Ajusta el primero valor (40px) para separar más o menos los puntos*/
   background-size: 10px 95%;
   background-repeat: repeat-x;
@@ -928,33 +926,54 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  overflow: visible;
+}
+
+.icono-azul2 {
+  background-color: #153fb7;
+}
+
+.icono-morado2 {
+  background-color: #7f00a9;
+}
+
+.icono-celeste2 {
+  background-color: #00a3cc;
+}
+
+.icono-naranja2 {
+  background-color: #ff7723;
 }
 
 .icono-wrap img {
   width: 45px;
   height: auto;
+  filter: brightness(0) invert(1);
+  /*Convierte la imagen en blanco*/
 }
 
 /*El número pequelo de color*/
 .numero {
   position: absolute;
-  top: 30px;
-  left: -50px;
-  width: 38px;
-  height: 38px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 800;
   color: white;
 }
 
 /*Colores especificos para cada número*/
 .paso-item:nth-child(1) .numero {
-  background-color: var(--azul);
+  background-color: #153fb7;
 }
 
 .paso-item:nth-child(2) .numero {
@@ -977,6 +996,7 @@ select {
 .paso-item h3 {
   font-size: 1.1rem;
   margin-bottom: 15px;
+  margin-top: 30px;
   font-weight: 700;
   max-width: 120px;
   /*para que el titulo rompa en dos líneas*/
@@ -996,34 +1016,47 @@ select {
  --------------------------------------------------------------------------
  ------------------------------------------------------------------------*/
 
+.impacto {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
 .container-impacto {
-  padding: 10px 100px 40px 100px;
+  padding: 30px 4%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .container-impacto h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--navy);
   margin-bottom: 30px;
+  font-weight: 800;
 }
 
 /*grid de 4 columnas con separadores*/
 .impacto-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
   /*Quitamos gap para usasr border como sepradores*/
 }
 
 .impacto-item {
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 20px;
-  border-right: 1px solid #eee;
-  /*Linea vertical divisoria*/
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.impacto-item:hover {
+  transform: translateY(-5px);
 }
 
 /*Quitamos borde del último elemento*/
@@ -1033,9 +1066,9 @@ select {
 
 /*envoltorio del icono con fondo suave*/
 .icono-bg {
-  width: 65px;
-  height: 65px;
-  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1053,14 +1086,16 @@ select {
 }
 
 .impacto-texto h3 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  margin-top: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  margin-top: 0px;
+  font-weight: 800;
 }
 
 .impacto-texto p {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
   line-height: 1.4;
 }
 
@@ -1072,7 +1107,7 @@ select {
 }
 
 .item-azul h3 {
-  color: var(--azul);
+  color: var(--azul80);
 }
 
 /*morado*/
@@ -1207,17 +1242,15 @@ select {
   font-style: italic;
 }
 
-
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
                 Preguntas frecuentes
  --------------------------------------------------------------------------
  ------------------------------------------------------------------------*/
 
-
 .preguntas-frecuentes {
   padding: 50px 100px;
-  background-color: #fff;
+  background-color: #cccfda;
   color: var(--navy);
 }
 
@@ -1278,7 +1311,6 @@ details[open] {
   border-top: 1px solid #2a3644;
 }
 
-
 /*------------------------------------------------------------------------
  -------------------------------------------------------------------------
                 banner
@@ -1286,7 +1318,7 @@ details[open] {
  ------------------------------------------------------------------------*/
 
 .banner {
-  background: linear-gradient(90deg, #4b148c 0%, #6a1b9a 100%);
+  background: linear-gradient(90deg, #000e47 0%, #1c3b9e 100%);
   /*morado vibrante*/
   padding: 60px 0;
   overflow: hidden;
@@ -1304,13 +1336,17 @@ details[open] {
   width: 30%;
   /*ocupamos el lado izquierdo*/
   height: 45%;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1.5px,
-      transparent 1.5px);
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.3) 1.5px,
+    transparent 1.5px
+  );
   background-size: 18px 18px;
   /*Máscara que desvanece de izquierda a derecha*/
-  -webkit-mask-image: radial-gradient(circle at top left,
-      black 10%,
-      transparent 50%);
+  -webkit-mask-image: radial-gradient(
+    circle at top left,
+    black 10%,
+    transparent 50%
+  );
   mask-image: radial-gradient(circle at top left, black 10%, transparent 50%);
 
   pointer-events: none;
@@ -1554,7 +1590,9 @@ details[open] {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 9999;
   /* Para que siempre esté por encima de todo */
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .whatsapp-float:hover {
@@ -1571,7 +1609,6 @@ details[open] {
 
 /* --- Responsive --- */
 @media (max-width: 600px) {
-
   /* En celulares muy pequeños, a veces es mejor dejar solo el icono */
   .whatsapp-float span {
     display: none;
@@ -1602,7 +1639,6 @@ details[open] {
   /* Por encima de todo, incluso del header */
   backdrop-filter: blur(5px);
   /* Efecto de desenfoque premium */
-
 }
 
 /* El contenedor del formulario */
@@ -1688,7 +1724,6 @@ details[open] {
    ============================================= */
 
 @media (max-width: 1024px) {
-
   /* --- HEADER --- */
   .container-header {
     padding: 0 3%;
@@ -1872,7 +1907,6 @@ details[open] {
    ============================================= */
 
 @media (max-width: 768px) {
-
   /* --- HEADER + MENÚ HAMBURGUESA --- */
   .menu-toggle {
     display: flex;
@@ -2161,7 +2195,6 @@ details[open] {
    ============================================= */
 
 @media (max-width: 480px) {
-
   /* --- HEADER --- */
   header {
     padding: 15px 0;
@@ -2379,8 +2412,9 @@ details[open] {
   }
 
   /* --- IMPACTO --- */
+
   .container-impacto {
-    padding: 30px 4%;
+    padding: 0 20px;
   }
 
   .container-impacto h2 {
@@ -2388,21 +2422,40 @@ details[open] {
     margin-bottom: 30px;
   }
 
+  .impacto-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .impacto-item {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
   .icono-bg {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
   }
 
   .icono-bg img {
-    width: 28px;
+    width: 35px;
+  }
+
+  .impacto-texto {
+    text-align: center;
   }
 
   .impacto-texto h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
   }
 
   .impacto-texto p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    padding: 0 5px;
   }
 
   /* --- TESTIMONIOS --- */
