@@ -2162,7 +2162,8 @@ details[open] {
   }
 
   .formulario-card {
-    padding: 25px;
+    padding: 20px;
+    width: 340px;
   }
 
   .form-grid {
