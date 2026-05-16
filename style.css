@@ -232,7 +232,7 @@ nav ul li a.active {
 .imagen-hero {
   position: absolute;
   bottom: -450px;
-  right: 180px;
+  right: 120px;
   transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
@@ -400,6 +400,10 @@ select {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 50px;
+}
+
+.propuesta-texto {
+  margin-top: 120px;
 }
 
 .propuesta-texto h2 {
@@ -633,7 +637,8 @@ select {
 /* Contenedor Maestro */
 .especialidades-layout-principal {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* La imagen es un poco más ancha que la lista */
+  grid-template-columns: 2fr 1fr;
+  /* La imagen es un poco más ancha que la lista */
   gap: 30px;
   align-items: center;
   max-width: 100%;
@@ -669,7 +674,8 @@ select {
 /*grid de 3 columnas*/
 .especialidades-grid {
   display: flex;
-  flex-direction: column; /* Forzamos a que se apilen verticalmente */
+  flex-direction: column;
+  /* Forzamos a que se apilen verticalmente */
   gap: 20px;
 }
 
@@ -744,7 +750,8 @@ select {
 
 .card-header {
   display: flex;
-  align-items: center; /* Alinea icono y texto al centro */
+  align-items: center;
+  /* Alinea icono y texto al centro */
   gap: 15px;
   margin-bottom: 15px;
 }
@@ -872,11 +879,9 @@ select {
   height: 8px;
   /* Este es el grosor de los puntos*/
   /*Degradado radial para crear círculos perfectos */
-  background-image: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.4) 35%,
-    transparent 25%
-  );
+  background-image: radial-gradient(circle,
+      rgba(255, 255, 255, 0.4) 35%,
+      transparent 25%);
   /*Ajusta el primero valor (40px) para separar más o menos los puntos*/
   background-size: 10px 95%;
   background-repeat: repeat-x;
@@ -1313,17 +1318,13 @@ details[open] {
   width: 30%;
   /*ocupamos el lado izquierdo*/
   height: 45%;
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.3) 1.5px,
-    transparent 1.5px
-  );
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3) 1.5px,
+      transparent 1.5px);
   background-size: 18px 18px;
   /*Máscara que desvanece de izquierda a derecha*/
-  -webkit-mask-image: radial-gradient(
-    circle at top left,
-    black 10%,
-    transparent 50%
-  );
+  -webkit-mask-image: radial-gradient(circle at top left,
+      black 10%,
+      transparent 50%);
   mask-image: radial-gradient(circle at top left, black 10%, transparent 50%);
 
   pointer-events: none;
@@ -1587,6 +1588,7 @@ details[open] {
 
 /* --- Responsive --- */
 @media (max-width: 600px) {
+
   /* En celulares muy pequeños, a veces es mejor dejar solo el icono */
   .whatsapp-float span {
     display: none;
@@ -1698,13 +1700,54 @@ details[open] {
 }
 
 /* =============================================
+   PANTALLA PEQUEÑA — max-width: 1480px
+   ============================================= */
+
+@media (max-width: 1480px) {
+  .imagen-hero img {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 600px;
+    opacity: 0.9;
+  }
+
+  .imagen-hero {
+    position: absolute;
+    bottom: -250px;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Alinea la imagen a la base si lo deseas */
+    pointer-events: none;
+  }
+
+  .propuesta-texto {
+    margin-top: 50px;
+  }
+
+}
+
+
+/* =============================================
    TABLET — max-width: 1024px
    ============================================= */
 
 @media (max-width: 1024px) {
+
   /* --- HEADER --- */
-  .container-header {
-    padding: 0 3%;
+  .container-hero {
+    min-height: auto;
+    padding: 40px 5%;
+  }
+
+  .imagen-hero {
+    width: 40%;
+    bottom: 5%;
+    left: 40%;
   }
 
   nav ul {
@@ -1721,6 +1764,8 @@ details[open] {
     gap: 30px;
     padding: 0 5%;
   }
+
+
 
   .hero-content {
     flex: none;
@@ -1885,6 +1930,7 @@ details[open] {
    ============================================= */
 
 @media (max-width: 768px) {
+
   /* --- HEADER + MENÚ HAMBURGUESA --- */
   .menu-toggle {
     display: flex;
@@ -1944,14 +1990,6 @@ details[open] {
     padding: 30px 0;
   }
 
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
   .hero-buttons {
     flex-direction: column;
     align-items: center;
@@ -1964,6 +2002,54 @@ details[open] {
     max-width: 320px;
     justify-content: center;
     text-align: center;
+  }
+
+  .container-hero {
+    flex-direction: column;
+    /* Cambia la dirección a vertical: texto arriba, formulario abajo */
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .hero-content {
+    flex: 0 0 100%;
+    text-align: center;
+    /* Centramos el texto para que se vea mejor en móvil */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    /* Achicamos un poco el título en celulares */
+  }
+
+  .hero-content p {
+    margin-right: 0;
+    /* Quitamos el margen derecho excesivo */
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    /* Centra el botón de WhatsApp */
+  }
+
+  /* Aquí acomodamos la imagen para que quede de fondo decorativo real en el móvil */
+  .imagen-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    /* Ocupará buena parte del fondo */
+    opacity: 0.2;
+    /* Le bajamos la opacidad para que no compita con el texto ni el formulario */
+    bottom: auto;
+    right: auto;
+  }
+
+  .hero-form-card {
+    width: 100%;
+    /* El formulario toma todo el ancho disponible del celular */
   }
 
   /* --- PILARES --- */
@@ -2174,6 +2260,7 @@ details[open] {
    ============================================= */
 
 @media (max-width: 480px) {
+
   /* --- HEADER --- */
   header {
     padding: 15px 0;
@@ -2196,7 +2283,8 @@ details[open] {
   }
 
   .imagen-hero {
-    position: relative; /* Vuelve al flujo normal en móvil */
+    position: relative;
+    /* Vuelve al flujo normal en móvil */
     transform: none;
     left: 0;
     top: 0;
@@ -2238,7 +2326,12 @@ details[open] {
   }
 
   .propuesta-valor {
-    padding: 60px 20px;
+    padding: 10px;
+    margin-top: 0 !important;
+  }
+
+  .propuesta-valor img {
+    width: 300px;
   }
 
   .container-propuesta {
@@ -2329,7 +2422,8 @@ details[open] {
   /* --- ESPECIALIDADES --- */
 
   .nuestras-especialidades {
-    padding: 40px 15px !important; /* El !important es para ganar al padding de 100px */
+    padding: 40px 15px !important;
+    /* El !important es para ganar al padding de 100px */
     width: 100%;
     box-sizing: border-box;
   }
@@ -2342,6 +2436,7 @@ details[open] {
     padding: 0;
     margin: 0;
   }
+
   .columna-imagen {
     width: 100%;
   }
@@ -2375,12 +2470,15 @@ details[open] {
   .investigacion-card,
   .incubacion-card,
   .experiencia-card {
-    width: 100% !important; /* Forzamos a que no use px fijos */
+    width: 100% !important;
+    /* Forzamos a que no use px fijos */
     max-width: 100%;
     margin: 0;
     padding: 20px;
-    box-sizing: border-box; /* Fundamental para que el padding no sume ancho */
-    text-align: center; /* Opcional: centra el texto para que se vea mejor en móvil */
+    box-sizing: border-box;
+    /* Fundamental para que el padding no sume ancho */
+    text-align: center;
+    /* Opcional: centra el texto para que se vea mejor en móvil */
   }
 
   .main-icon {
@@ -2444,7 +2542,8 @@ details[open] {
   /* --- IMPACTO --- */
 
   .impacto {
-    padding: 40px 15px !important; /* El !important es para ganar al padding de 100px */
+    padding: 40px 15px !important;
+    /* El !important es para ganar al padding de 100px */
     width: 100%;
     box-sizing: border-box;
   }
@@ -2558,7 +2657,8 @@ details[open] {
   /* --- preguntas --- */
 
   .preguntas-frecuentes {
-    padding: 40px 15px !important; /* El !important es para ganar al padding de 100px */
+    padding: 40px 15px !important;
+    /* El !important es para ganar al padding de 100px */
     width: 100%;
     box-sizing: border-box;
   }
@@ -2583,6 +2683,8 @@ details[open] {
   .formulario-card {
     padding: 10px;
     width: 330px;
+    margin-left: 33px;
+    ;
   }
 
   .formulario-card input,
@@ -2602,7 +2704,7 @@ details[open] {
   }
 
   .footer-col {
-    flex: 0 0 100%;
+    flex: 0 0 55%;
     text-align: center;
   }
 
