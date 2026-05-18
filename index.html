@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="imagen-hero">
-                <img src="img_web/profesionales.png" alt="">
+                <img src="img_web/image3.png" alt="">
             </div>
 
             <div class="hero-form-card">
@@ -136,7 +136,7 @@
                                     Objetivos de Desarrollo Sostenible (ODS).</p>
                             </div>
                         </div>
-                        <button class="cta-button btn-abrir-modal">Quiero impulsar mi proyecto</button>
+                        <button class="btn-investigacion btn-abrir-modal" data-target="modal-contacto-investigacion">Quiero impulsar mi proyecto</button>
                     </div>
                     <div class="incubacion-card">
                         <div class="card-header">
@@ -150,7 +150,7 @@
                                     modelo de negocio y acompañamiento para su activación.</p>
                             </div>
                         </div>
-                        <button class="cta-button btn-abrir-modal">Quiero desarrollar mi startup</button>
+                        <button class="btn-startups btn-abrir-modal" data-target="modal-contacto-startups">Quiero desarrollar mi startup</button>
                     </div>
                     <div class="experiencia-card">
                         <div class="card-header">
@@ -164,7 +164,7 @@
                                     retención y fidelización.</p>
                             </div>
                         </div>
-                        <button class="cta-button btn-abrir-modal">Quiero mejorar mi experiencia</button>
+                        <button class="btn-experiencia btn-abrir-modal" data-target="modal-contacto-experiencia">Quiero mejorar mi experiencia</button>
                     </div>
                 </div>
             </div>
@@ -275,28 +275,28 @@
         <ol class="pasos-container">
             <li class="paso-item">
                 <div class="icono-wrap icono-azul2">
-                    <img src="img_web/lupa.png" alt="Icono diagnóstico">
+                    <img src="img_web/ICONOS-44.png" alt="Icono diagnóstico">
                 </div>
                 <h3>Diagnóstico</h3>
                 <p>Entendemos tu necesidad, contexto y objetivo para definir la mejor ruta.</p>
             </li>
             <li class="paso-item">
                 <div class="icono-wrap icono-morado2">
-                    <img src="img_web/apuntes.png" alt="Icono apuntes">
+                    <img src="img_web/ICONOS-45.png" alt="Icono apuntes">
                 </div>
                 <h3>Diseño estratégico</h3>
                 <p>Estructuramos la propuesta, los entregables y el enfoque de trabajo.</p>
             </li>
             <li class="paso-item">
                 <div class="icono-wrap icono-celeste2">
-                    <img src="img_web/desarrollo.png" alt="Icono desarrollo">
+                    <img src="img_web/ICONOS-46.png" alt="Icono desarrollo">
                 </div>
                 <h3>Desarrollo y acompañamiento</h3>
                 <p>Avanzamos contigo con seguimiento, revisión experta y retroalimentación continua.</p>
             </li>
             <li class="paso-item">
                 <div class="icono-wrap icono-naranja2">
-                    <img src="img_web/validacion.png" alt="Icono validación">
+                    <img src="img_web/ICONOS-47.png" alt="Icono validación">
                 </div>
                 <h3>Validación y cierre</h3>
                 <p>Dejamos tu proyecto listo para presentar, activar, implementar o escalar.</p>
@@ -306,50 +306,56 @@
     <article class="testimonios">
         <div class="container-testimonios">
             <h2>Lo que dicen quienes confiaron en nosotros</h2>
-            <div class="testimonios-grid">
-                <div class="testimonio-card">
-                    <div class="testimonio-perfil">
-                        <img src="img_web/mario.jpg" alt="Mario G." class="avatar">
-                        <div class="autor-info">
-                            <span class="nombre">Mario G.</span>
-                            <span class="cargo">Ingeniero Ambiental</span>
+            <div class="carousel-wrapper">
+                <button class="nav-btn prev-btn" id="prevTestimonio">&#10094;</button>
+                <div class="testimonios-carousel-container">
+                    <div class="testimonios-grid" id="testimoniosGrid">
+                        <div class="testimonio-card">
+                            <div class="testimonio-perfil">
+                                <img src="img_web/mario.jpg" alt="Mario G." class="avatar">
+                                <div class="autor-info">
+                                    <span class="nombre">Mario G.</span>
+                                    <span class="cargo">Ingeniero Ambiental</span>
+                                </div>
+                            </div>
+                            <!-- Columna Derecha: Comillas y Párrafo -->
+                            <div class="testimonio-texto">
+                                <img src="img_web/comillas.png" alt="" class="comillas">
+                                <p>Gracias a InvexiaLab logré terminar mi tesis y sustentar con éxito. El acompañamiento
+                                    fue clave en todo el proceso.</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Columna Derecha: Comillas y Párrafo -->
-                    <div class="testimonio-texto">
-                        <img src="img_web/comillas.png" alt="" class="comillas">
-                        <p>Gracias a InvexiaLab logré terminar mi tesis y sustentar con éxito. El acompañamiento
-                            fue clave en todo el proceso.</p>
-                    </div>
-                </div>
-                <div class="testimonio-card">
-                    <div class="testimonio-perfil">
-                        <img src="img_web/lucia.jpg" alt="Lucia R." class="avatar">
-                        <div class="autor-info">
-                            <span class="nombre">Lucia R.</span>
-                            <span class="cargo">Founder de GreenBox</span>
+                        <div class="testimonio-card">
+                            <div class="testimonio-perfil">
+                                <img src="img_web/lucia.jpg" alt="Lucia R." class="avatar">
+                                <div class="autor-info">
+                                    <span class="nombre">Lucia R.</span>
+                                    <span class="cargo">Founder de GreenBox</span>
+                                </div>
+                            </div>
+                            <div class="testimonio-texto">
+                                <img src="img_web/comillas.png" alt="" class="comillas">
+                                <p>Validé mi idea de negocio y hoy tengo mis primeros clientes. El programa de incubación me
+                                    dio claridad y dirección.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonio-texto">
-                        <img src="img_web/comillas.png" alt="" class="comillas">
-                        <p>Validé mi idea de negocio y hoy tengo mis primeros clientes. El programa de incubación me
-                            dio claridad y dirección.</p>
-                    </div>
-                </div>
-                <div class="testimonio-card">
-                    <div class="testimonio-perfil">
-                        <img src="img_web/carlos.jpg" alt="Carlos M." class="avatar">
-                        <div class="autor-info">
-                            <span class="nombre">Carlos M.</span>
-                            <span class="cargo">Gerente Comercial</span>
+                        <div class="testimonio-card">
+                            <div class="testimonio-perfil">
+                                <img src="img_web/carlos.jpg" alt="Carlos M." class="avatar">
+                                <div class="autor-info">
+                                    <span class="nombre">Carlos M.</span>
+                                    <span class="cargo">Gerente Comercial</span>
+                                </div>
+                            </div>
+                            <div class="testimonio-texto">
+                                <img src="img_web/comillas.png" alt="" class="comillas">
+                                <p>Me ayudaron a mejorar la experiencia de nuestros clientes y aumentamos nuestra tasa de
+                                    retención en 35% en 6 meses.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="testimonio-texto">
-                        <img src="img_web/comillas.png" alt="" class="comillas">
-                        <p>Me ayudaron a mejorar la experiencia de nuestros clientes y aumentamos nuestra tasa de
-                            retención en 35% en 6 meses.</p>
-                    </div>
+                    </div>   
                 </div>
+                <button class="nav-btn next-btn" id="nextTestimonio">&#10095;</button> 
             </div>
         </div>
     </article>
@@ -439,20 +445,20 @@
             <div class="footer-col">
                 <h3>Enlaces rápidos</h3>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Metodología</a></li>
-                    <li><a href="#">Impacto</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#metodologia">Metodología</a></li>
+                    <li><a href="#preguntas">Preguntas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Servicios</h3>
                 <ul>
-                    <li><a href="#">Investigación</a></li>
-                    <li><a href="#">Startups</a></li>
-                    <li><a href="#">Experiencia del Cliente</a></li>
+                    <li><a href="#servicios">Investigación</a></li>
+                    <li><a href="#servicios">Startups</a></li>
+                    <li><a href="#servicios">Experiencia del Cliente</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -477,26 +483,59 @@
     </a>
 
     <!-- Estructura del Modal para el formulario-->
-    <div id="modal-contacto" class="modal-overlay">
+    <div id="modal-contacto-investigacion" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
-            <div class="formulario-card">
+            <div class="formulario-card-investigacion">
                 <h3>Agenda tu sesión gratuita</h3>
                 <p>Completa tus datos y nos pondremos en contacto.</p>
-                <form id="form-modal">
+                <form id="form-modal-investigacion">
                     <div class="form-grid">
                         <input type="text" name="nombre" placeholder="Nombre" required>
                         <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
                             required>
                         <input type="email" name="email" placeholder="Correo electrónico" required>
-                        <div class="select-wrapper">
-                            <select name="servicio" required>
-                                <option value="" disabled selected>Selecciona un servicio</option>
-                                <option value="asesoria">Investigación aplicada</option>
-                                <option value="incubacion">Startups</option>
-                                <option value="experiencia">Experiencia del cliente</option>
-                            </select>
-                        </div>
+                        <input type="text" name="servicio" value="Investigación aplicada" readonly>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-contacto-startups" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="formulario-card-startups">
+                <h3>Agenda tu sesión gratuita</h3>
+                <p>Completa tus datos y nos pondremos en contacto.</p>
+                <form id="form-modal-startups">
+                    <div class="form-grid">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                            required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <input type="text" name="servicio" value="Startups" readonly>
+                    </div>
+                    <button type="submit" class="cta-button">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-contacto-experiencia" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="formulario-card-experiencia">
+                <h3>Agenda tu sesión gratuita</h3>
+                <p>Completa tus datos y nos pondremos en contacto.</p>
+                <form id="form-modal-experiencia">
+                    <div class="form-grid">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" pattern="[0-9]{9,15}"
+                            required>
+                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                        <input type="text" name="servicio" value="Experiencia del cliente" readonly>
                     </div>
                     <button type="submit" class="cta-button">Enviar solicitud</button>
                 </form>
